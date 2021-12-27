@@ -2,6 +2,7 @@ import useColorTheme from "@/pages/hooks/theme";
 import clsx from "clsx";
 import { useTheme } from "next-themes";
 import { HTMLAttributes } from "react";
+import SmartLink from "../SmartLinks";
 
 interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
   href?: string;
@@ -18,7 +19,7 @@ const Button = ({
 }: ButtonProps) => {
   const { isLightTheme, isDarkTheme } = useColorTheme();
 
-  return (
+  const Element = (
     <button
       className={clsx(
         "rounded-md p-base font-semibold shadow",
@@ -45,6 +46,11 @@ const Button = ({
       {children}
     </button>
   );
+
+  if (href) {
+    return <SmartLink href={href}>{Element}</SmartLink>;
+  }
+  return Element;
 };
 
 export default Button;

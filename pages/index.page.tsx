@@ -30,8 +30,8 @@ const IndexPage = ({ projects }: { projects: Category }) => {
         <Spacer></Spacer>
 
         <div className="flex space-x-base">
-          <Button variant="primary">Current Endeavors</Button>
-          <Button>Resume</Button>
+          <Button variant="primary" href="/about">Current Endeavors</Button>
+          <Button href="/resume">Resume</Button>
         </div>
 
         <Spacer size="md"></Spacer>
