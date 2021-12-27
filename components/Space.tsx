@@ -1,6 +1,6 @@
 import clsx from "clsx";
 
-const sizes = ["xs", "sm", "base", "md", "lg", "xl"] as const;
+const sizes = ["xs", "sm", "base", "md", "lg", "xl", "2xl", "3xl"] as const;
 type Size = typeof sizes[number];
 
 interface SpacerProps {
@@ -21,6 +21,8 @@ const _ = [
   "h-sm",
   "h-xs",
   "h-xl",
+  "h-2xl",
+  "h-3xl",
   "h-lg",
   "w-md",
   "w-base",
@@ -28,6 +30,9 @@ const _ = [
   "w-xs",
   "w-xl",
   "w-lg",
+  "w-xl",
+  "w-2xl",
+  "w-3xl",
 ] as const;
 
 export default Spacer;

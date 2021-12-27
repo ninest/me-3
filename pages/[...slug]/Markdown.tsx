@@ -54,7 +54,7 @@ const MarkdownPage = ({
         </div>
 
         {/* For projects, show links at the top too */}
-        {category.code === "project" && (
+        {category?.code === "project" && (
           <>
             <Spacer size="xl"></Spacer>
             <LinkedPages

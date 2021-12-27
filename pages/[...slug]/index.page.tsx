@@ -1,6 +1,10 @@
 import { listToFilepath } from "@/lib/file";
 import type { GetServerSidePropsContext } from "next";
-import { Category, MarkdownPageData } from "@/types/content";
+import {
+  Category,
+  IncompleteCategory,
+  MarkdownPageData,
+} from "@/types/content";
 
 import {
   CategoryCode,
@@ -31,7 +35,7 @@ export const getServerSideProps = async ({
     // Post listing page for a particular category code
     const categoryCode = slug![0] as CategoryCode;
 
-    const incompleteCategory: Category = categories.filter(
+    const incompleteCategory: IncompleteCategory = categories.filter(
       (cat) => cat.code == categoryCode
     )[0];
 

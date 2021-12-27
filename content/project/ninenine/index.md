@@ -1,6 +1,6 @@
 ---
 title: Holt Soundboard
-description: Soundboard for characters from Brooklyn Nine-Nine
+description: Brooklyn Nine-Nine characters soundboard
 updatedAt: 2021-12-27
 
 icon: ninenine

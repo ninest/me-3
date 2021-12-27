@@ -20,6 +20,8 @@ module.exports = {
         md: `${5 * 0.25}em`,
         lg: `${7 * 0.25}em`,
         xl: `${9 * 0.25}em`,
+        '2xl': `${12 * 0.25}em`,
+        '3xl': `${16 * 0.25}em`,
       },
       colors: {
         transparent: "transparent",

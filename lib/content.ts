@@ -1,8 +1,11 @@
 import {
+  Category,
   Frontmatter,
+  IncompleteCategory,
   IncompleteMarkdownPageData,
   MarkdownPageData,
 } from "@/types/content";
+import { categories, posts } from "./content-map";
 import { mdxFromFile } from "./mdx";
 
 /* 
@@ -63,4 +66,17 @@ export async function getPost(filepath: string): Promise<MarkdownPageData> {
     markdownPage.frontmatter?.linkedPages ?? [];
 
   return markdownPage;
+}
+
+export async function getFullCategory(categoryCode: CategoryCode): Promise<Category> {
+  const incompleteCategory: IncompleteCategory = categories.filter(
+    (cat) => cat.code == categoryCode
+  )[0];
+  const completeCategory: Category = {
+    ...incompleteCategory,
+    pages: await getPostsFromList(
+      posts.filter((post) => post.categoryCodes.includes(categoryCode))
+    ),
+  };
+  return completeCategory
 }

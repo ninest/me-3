@@ -88,4 +88,5 @@ const svgIconMap: Record<string, string> = {
   nsr: "/icons/nsr.svg",
   shots: "/icons/shots.svg",
   typer: "/icons/typer.svg",
+  uniquecode: "/icons/uniquecode.svg",
 };

@@ -30,8 +30,8 @@ const PagePreview = ({
       <SmartLink
         href={url}
         className={clsx(
-          "flex rounded space-x-lg hover:bg-primary-lightest",
-          // "items-center",
+          "rounded hover:bg-primary-lightest",
+
           {
             "p-sm -m-sm": ghost,
             "p-md": !ghost,
@@ -44,29 +44,32 @@ const PagePreview = ({
           props.className
         )}
       >
-        <div>
-          {/* <Spacer size="sm"></Spacer> */}
-          <Icon className="text-gray-light" id={icon} size="base"></Icon>
-        </div>
-        <div>
-          <h3
-            className={clsx("font-medium  text-gray-dark", {
-              "text-sm": size == "sm",
-              "text-base": size == "base",
-              "text-lg": size == "lg",
-            })}
-          >
-            {title}
-          </h3>
-          {description && (
-            <p
-              className={clsx("text-gray", {
-                "text-xs": size == "base",
+        <div className="flex space-x-xl">
+          <div className="flex-initial">
+            <div>
+              <Icon className="text-gray-light" id={icon} size="base"></Icon>
+            </div>
+          </div>
+          <div className="flex-1">
+            <h3
+              className={clsx("font-medium  text-gray-dark", {
+                "text-sm": size == "sm",
+                "text-base": size == "base",
+                "text-lg": size == "lg",
               })}
             >
-              {description}
-            </p>
-          )}
+              {title}
+            </h3>
+            {description && (
+              <p
+                className={clsx("text-gray", {
+                  "text-xs": size == "base",
+                })}
+              >
+                {description}
+              </p>
+            )}
+          </div>
         </div>
       </SmartLink>
     </>

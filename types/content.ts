@@ -3,8 +3,9 @@ import { CategoryCode } from "@/lib/content";
 export interface Category {
   code: CategoryCode;
   name: string;
-  pages?: MarkdownPageData[];
+  pages: MarkdownPageData[];
 }
+export type IncompleteCategory = Omit<Category, "pages">;
 
 export interface Frontmatter {
   slug: string;

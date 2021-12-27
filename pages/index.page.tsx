@@ -1,12 +1,24 @@
-import type { NextPage } from "next";
+import type { GetServerSidePropsContext, NextPage } from "next";
 import Icon from "@/components/Icon";
 import Title from "@/components/typography/Title";
 import Spacer from "@/components/Space";
 import Space from "@/components/Space";
 import Button from "@/components/button/Button";
+import { getFullCategory } from "@/lib/content";
+import { Category } from "@/types/content";
+import PagePreview from "@/components/PagePreview";
 
+export const getServerSideProps = async ({
+  params,
+}: GetServerSidePropsContext) => {
+  const projects = await getFullCategory("project");
 
-const IndexPage: NextPage = () => {
+  return {
+    props: { projects },
+  };
+};
+
+const IndexPage = ({ projects }: { projects: Category }) => {
   return (
     <>
       <div className="wrapper">
@@ -30,6 +42,24 @@ const IndexPage: NextPage = () => {
             ! Please hire me.
           </p>
         </article>
+
+        <Spacer size="3xl"></Spacer>
+
+        <Title level={2}>Projects</Title>
+        <Spacer size="lg"></Spacer>
+
+        <section className="grid gap-xl grid-cols-1 md:grid-cols-2">
+          {projects.pages.map((page) => (
+            <PagePreview
+              icon={page.frontmatter?.icon!}
+              title={page.frontmatter?.title!}
+              description={page.frontmatter?.description}
+              url={`/${page.categoryCodes[0]}/${page.slug}]`}
+              size="lg"
+              ghost
+            ></PagePreview>
+          ))}
+        </section>
       </div>
     </>
   );
