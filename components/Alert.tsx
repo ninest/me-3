@@ -16,7 +16,7 @@ interface AlertProps extends HTMLAttributes<HTMLDivElement> {
 const Alert = ({
   title,
   children,
-  variant,
+  variant="gray",
   open = true,
   ...props
 }: AlertProps) => {

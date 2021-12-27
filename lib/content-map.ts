@@ -36,6 +36,19 @@ export const posts: MarkdownPageData[] = [
   { categoryCodes: ["work-experience"], slug: "h3zoomai" },
   { categoryCodes: ["work-experience"], slug: "credr" },
 
+  /* VScode */
+  { categoryCodes: ["vscode"], slug: "sonic-pi" },
+
+  /* Python */
+  { categoryCodes: ["python"], slug: "black-installation-usage" },
+  { categoryCodes: ["python","vscode"], slug: "vscode-interactive-pyenv-venv" },
+  
+  /* Nextjs */
+  { categoryCodes: ["nextjs"], slug: "custom-routing" },
+  
+  /* Mac */
+  { categoryCodes: ["mac"], slug: "clear-space" },
+
   // CS posts
   // { categoryCodes: ["cs", "blog"], slug: "searching" },
 ];

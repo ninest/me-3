@@ -11,6 +11,7 @@ import {
   FaGrinBeam,
   FaMoon,
   FaPencilAlt,
+  FaRedditAlien,
   FaRegFileAlt,
   FaSearch,
   FaSortNumericUp,
@@ -18,7 +19,7 @@ import {
 } from "react-icons/fa";
 
 interface IconProps extends HTMLAttributes<HTMLDivElement> {
-  size?: "xs"| "sm" | "base" | "md" | "lg";
+  size?: "xs" | "sm" | "base" | "md" | "lg";
   id?: string;
 }
 
@@ -83,6 +84,7 @@ const iconMap: Record<string, IconType> = {
   appstore: FaAppStoreIos,
   web: FaFirefox,
   filealt: FaRegFileAlt,
+  reddit: FaRedditAlien,
 };
 
 const svgIconMap: Record<string, string> = {

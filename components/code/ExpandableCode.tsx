@@ -9,7 +9,7 @@ interface ExpandableCodeProps extends HTMLAttributes<HTMLDivElement> {
 }
 const ExpandableCode = ({
   title,
-  open,
+  open = true,
   children,
   ...props
 }: ExpandableCodeProps) => {

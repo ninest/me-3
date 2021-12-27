@@ -47,7 +47,7 @@ const PagePreview = ({
         <div className="flex space-x-xl">
           <div className="flex-initial">
             <div>
-              <Icon className="text-gray-light" id={icon} size="base"></Icon>
+              <Icon className="text-gray-light" id={icon} size="sm"></Icon>
             </div>
           </div>
           <div className="flex-1">
