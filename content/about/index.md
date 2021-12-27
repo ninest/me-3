@@ -1,16 +1,10 @@
 ---
-title: About
+title: About Me
 lastUpdated: 2021-11-13
-description: The first example post of this blog
+description: More about me
 showContents: true
 ---
 
-This is the about page, which comes from a markdown page.
+I'm a computer science student at **Northeastern University**. I'm currently searching for internships for Summer 2022.
 
-## Example
-
-This is the first example heading for demonstration purposes. It does not serve much of a purpose honestly.
-
-### This is a subheading
-
-Just to test things out and make sure everything works as per requirements in the documentation and I am just typing random words at this moment.
+I hope to share guides on simple but interesting topics.

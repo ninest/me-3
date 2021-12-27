@@ -2,6 +2,7 @@ import clsx from "clsx";
 import { HTMLAttributes } from "react";
 import { IconType } from "react-icons";
 import {
+  FaBrain,
   FaGithub,
   FaGrinBeam,
   FaMoon,
@@ -49,4 +50,5 @@ const iconMap: Record<string, IconType> = {
   grin: FaGrinBeam,
   moon: FaMoon,
   sun: FaSun,
+  brain: FaBrain,
 };

@@ -5,6 +5,7 @@ import { mdxFromFile } from "./mdx";
 Code: category name for content/posts the website contains 
 Reference: https://stackoverflow.com/a/45257357/8677167
 */
+
 export const categoryCodes = [
   "blog",
   "python",
