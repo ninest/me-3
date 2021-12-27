@@ -3,6 +3,7 @@ import Icon from "@/components/Icon";
 import Title from "@/components/typography/Title";
 import Spacer from "@/components/Space";
 import Space from "@/components/Space";
+import Button from "@/components/button/Button";
 // import Space from "@/components/Space";
 
 const IndexPage: NextPage = () => {
@@ -10,24 +11,24 @@ const IndexPage: NextPage = () => {
     <>
       <div className="wrapper">
         <Space size="xl"></Space>
-        <Icon id="grin" size="lg"></Icon>
-        <Spacer size="md"></Spacer>
+        {/* <Icon id="grin" size="lg"></Icon> */}
+        {/* <Spacer size="md"></Spacer> */}
 
-        <Title>Welcome to First Page!</Title>
+        <Title>Parth Kabra</Title>
         <Spacer></Spacer>
+
+        <div className="flex space-x-base">
+          <Button variant="primary">Current Endeavors</Button>
+          <Button>Resume</Button>
+        </div>
+
+        <Spacer size="md"></Spacer>
 
         <article className="prose">
           <p>
-            This is a website for storing information and content for your
-            choice! Here are some features:
+            Hi! I'm a computer science student at <b>Northeastern University</b>
+            ! Please hire me.
           </p>
-
-          <ul>
-            <li>Easy to use</li>
-            <li>Easy to customize</li>
-            <li>Emoji yay!</li>
-            <li>Table of contents: on desktop, hover the mouse to the right</li>
-          </ul>
         </article>
       </div>
     </>

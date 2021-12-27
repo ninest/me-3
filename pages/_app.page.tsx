@@ -1,19 +1,19 @@
 import type { AppProps } from "next/app";
+import { DefaultSeo } from "next-seo";
+import { ThemeProvider } from "next-themes";
 import Navbar from "@/components/Navbar";
 import Spacer from "@/components/Space";
 
 import "../styles/globals.scss";
-import { DefaultSeo, NextSeo } from "next-seo";
-import { ThemeProvider } from "next-themes";
 
 function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <ThemeProvider>
         <DefaultSeo
-          titleTemplate="%s - Next Page"
-          defaultTitle="Next Page"
-          description="A simple website with Next.js"
+          titleTemplate="%s - Parth Kabra"
+          defaultTitle="Parth Kabra"
+          description="Computer Science Student at Northeastern University"
           openGraph={{
             site_name: "ninest",
             type: "website",
@@ -25,8 +25,8 @@ function App({ Component, pageProps }: AppProps) {
           }}
         ></DefaultSeo>
         <Navbar />
-        {/* <main className="wrapper"> */}
-        <main className="">
+
+        <main>
           <Component {...pageProps} />
 
           {/* TODO: footer */}

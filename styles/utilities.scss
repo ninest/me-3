@@ -21,6 +21,9 @@
   .ghost:hover {
     @apply bg-black bg-opacity-10;
   }
+  [data-theme="dark"] .ghost:hover {
+    @apply bg-white bg-opacity-10;
+  }
 
   /* Main page wrapper */
   .wrapper {

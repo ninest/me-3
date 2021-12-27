@@ -13,7 +13,8 @@ const Navbar = () => {
     <>
       <header className="z-50 sticky top-0 bg-light opacity-80 p-md space-x-lg flex justify-between font-display">
         <SmartLink href="/" className="text-lg text-gray-dark">
-          📉 First Page
+          <span className="block md:hidden">P. Kabra</span>
+          <span className="hidden md:block">Parth Kabra</span>
         </SmartLink>
         <nav className="">
           <ul className="flex space-x-base text-gray">
