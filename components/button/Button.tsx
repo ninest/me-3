@@ -1,5 +1,6 @@
 import useColorTheme from "@/pages/hooks/theme";
 import clsx from "clsx";
+import { useTheme } from "next-themes";
 import { HTMLAttributes } from "react";
 
 interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {

@@ -9,7 +9,11 @@ import "../styles/globals.scss";
 function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <ThemeProvider>
+      <ThemeProvider
+        defaultTheme="light"
+        themes={["light", "dark"]}
+        enableSystem={false}
+      >
         <DefaultSeo
           titleTemplate="%s - Parth Kabra"
           defaultTitle="Parth Kabra"

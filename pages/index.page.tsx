@@ -51,10 +51,11 @@ const IndexPage = ({ projects }: { projects: Category }) => {
         <section className="grid gap-xl grid-cols-1 md:grid-cols-2">
           {projects.pages.map((page) => (
             <PagePreview
+              key={`/${page.categoryCodes[0]}/${page.slug}]`}
+              url={`/${page.categoryCodes[0]}/${page.slug}]`}
               icon={page.frontmatter?.icon!}
               title={page.frontmatter?.title!}
               description={page.frontmatter?.description}
-              url={`/${page.categoryCodes[0]}/${page.slug}]`}
               size="lg"
               ghost
             ></PagePreview>

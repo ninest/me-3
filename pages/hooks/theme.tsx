@@ -1,13 +1,13 @@
 import { useTheme } from "next-themes";
 
 const useColorTheme = () => {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
 
   const setLightTheme = () => setTheme("light");
   const setDarkTheme = () => setTheme("dark");
 
-  const isLightTheme = theme === "light";
-  const isDarkTheme = theme === "dark";
+  const isLightTheme = resolvedTheme === "light";
+  const isDarkTheme = resolvedTheme === "dark";
 
   return {
     setLightTheme,
