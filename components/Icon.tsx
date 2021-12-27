@@ -18,7 +18,7 @@ import {
 } from "react-icons/fa";
 
 interface IconProps extends HTMLAttributes<HTMLDivElement> {
-  size?: "sm" | "base" | "md" | "lg";
+  size?: "xs"| "sm" | "base" | "md" | "lg";
   id?: string;
 }
 
@@ -26,10 +26,11 @@ const Icon = ({ children, size = "base", id, ...props }: IconProps) => {
   const className = clsx(
     "text-gray",
     {
-      "text-5xl": size == "lg",
-      "text-2xl": size == "md",
-      "text-xl": size == "base",
-      "text-sm": size == "sm",
+      "text-6xl": size == "lg",
+      "text-5xl": size == "md",
+      "text-4xl": size == "base",
+      "text-2xl": size == "sm",
+      "text-xl": size == "xs",
     },
     props.className
   );

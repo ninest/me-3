@@ -49,9 +49,9 @@ const Navbar = () => {
             <li>
               <button onClick={toggleTheme}>
                 {theme === "light" ? (
-                  <Icon id="moon" size="sm" />
+                  <Icon id="moon" size="xs" />
                 ) : (
-                  <Icon id="sun" size="sm" />
+                  <Icon id="sun" size="xs" />
                 )}
               </button>
             </li>

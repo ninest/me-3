@@ -25,7 +25,7 @@ export const categoryCodes = [
   "cli",
   "cs",
   "project",
-  "work-experience"
+  "work-experience",
 ] as const;
 export type CategoryCode = typeof categoryCodes[number];
 
@@ -69,7 +69,9 @@ export async function getPost(filepath: string): Promise<MarkdownPageData> {
   return markdownPage;
 }
 
-export async function getFullCategory(categoryCode: CategoryCode): Promise<Category> {
+export async function getFullCategory(
+  categoryCode: CategoryCode
+): Promise<Category> {
   const incompleteCategory: IncompleteCategory = categories.filter(
     (cat) => cat.code == categoryCode
   )[0];
@@ -79,5 +81,10 @@ export async function getFullCategory(categoryCode: CategoryCode): Promise<Categ
       posts.filter((post) => post.categoryCodes.includes(categoryCode))
     ),
   };
-  return completeCategory
+  return completeCategory;
+}
+
+export async function getAllPages(): Promise<MarkdownPageData[]> {
+  const pages: MarkdownPageData[] = await getPostsFromList(posts);
+  return pages;
 }
