@@ -31,7 +31,8 @@ export async function mdxFromFile<T>(filepath: string) {
   }
 
   const { code, frontmatter } = await bundleMDX({
-    source,
+    source, 
+    cwd: path.join(process.cwd(), "/content"),
     xdmOptions(options, frontmatter) {
       // Return xdmOptions: https://github.com/kentcdodds/mdx-bundler#xdmoptions
       options.remarkPlugins = [
@@ -39,6 +40,18 @@ export async function mdxFromFile<T>(filepath: string) {
         remarkCodeMeta,
       ];
       options.rehypePlugins = [...(options.rehypePlugins ?? [])];
+      return options;
+    },
+    esbuildOptions: (options) => {
+      options.outdir = path.join(process.cwd(), "/public/notouchy", filepath);
+      options.loader = {
+        ...options.loader,
+        ".png": "file",
+      };
+
+      options.publicPath = filepath;
+
+      options.write = true;
       return options;
     },
   });

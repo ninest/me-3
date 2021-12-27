@@ -1,3 +1,4 @@
+import Image from "next/image";
 import CodeBlock from "@/components/code/CodeBlock";
 import ExpandableCode from "@/components/code/ExpandableCode";
 import Alert from "@/components/Alert";
@@ -18,16 +19,24 @@ const substitutedComponents = {
   /* Expandable code */
   ExpandableCode: (props: any) => {
     return (
-      <ExpandableCode
-        {...props}
-        className="mobile-full-bleed"
-      ></ExpandableCode>
+      <ExpandableCode {...props} className="mobile-full-bleed"></ExpandableCode>
     );
   },
 
   /* General alerts */
   Alert: (props: any) => {
     return <Alert {...props} className="mobile-full-bleed"></Alert>;
+  },
+
+  /* Next image */
+  Image: (props: any) => {
+    const src = `/notouchy/${props.src}`;
+
+    return (
+      <div className="flex justify-center mobile-full-bleed">
+        <Image {...props} src={src} className="md:rounded bg-gray-lightest"></Image>
+      </div>
+    );
   },
 };
 

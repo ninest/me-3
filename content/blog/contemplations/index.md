@@ -11,7 +11,9 @@ Below are some of the reasons why I would like to pursue computer science with f
 
 My aim is to use collaborative crowd-sourcing to bring together communities, corporations, and the government to address the pothole problem and optimize the use of limited resources.
 
-{/* <OneDesktopImage src="/blog/contemplations/ditchit.png" width={2346} height={1962} /> */}
+import ditchIt from './blog/contemplations/images/ditchit.png';
+
+<Image src={ditchIt} height={1962} width={2346} />
 
 ### Data collection
 
