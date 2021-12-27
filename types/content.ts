@@ -10,7 +10,7 @@ export interface Frontmatter {
   slug: string;
   title: string;
   description: string;
-  lastUpdated: string;
+  updatedAt: string;
 
   icon: string;
 
@@ -37,5 +37,5 @@ export interface LinkedPage {
   icon: string;
   url: string;
   title: string;
-  description: string;
+  description?: string;
 }

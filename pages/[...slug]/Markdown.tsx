@@ -43,7 +43,7 @@ const MarkdownPage = ({
               <span>{category.name}</span>
               <span>{"·"}</span>
               <span className="text-gray">
-                {formatDate(new Date(frontmatter.lastUpdated))}
+                {formatDate(new Date(frontmatter.updatedAt))}
               </span>
             </>
           )}

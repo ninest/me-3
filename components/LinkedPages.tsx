@@ -13,15 +13,16 @@ const LinkedPages = ({ pages, ghost, size }: LinkedPagesProps) => {
     <>
       <div className="space-y-md">
         {pages.map((page) => (
-          <PagePreview
-            key={page.url}
-            url={page.url}
-            icon={page.icon}
-            title={page.title}
-            description={page.description}
-            ghost={ghost}
-            size={size}
-          ></PagePreview>
+          <div key={page.url}>
+            <PagePreview
+              url={page.url}
+              icon={page.icon}
+              title={page.title}
+              description={page.description}
+              ghost={ghost}
+              size={size}
+            ></PagePreview>
+          </div>
         ))}
       </div>
     </>

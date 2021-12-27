@@ -1,6 +1,6 @@
 ---
 title: About Me
-lastUpdated: 2021-11-13
+updatedAt: 2021-11-13
 description: More about me
 showContents: true
 ---

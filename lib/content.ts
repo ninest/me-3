@@ -1,4 +1,8 @@
-import { Frontmatter, IncompleteMarkdownPageData, LinkedPage, MarkdownPageData } from "@/types/content";
+import {
+  Frontmatter,
+  IncompleteMarkdownPageData,
+  MarkdownPageData,
+} from "@/types/content";
 import { mdxFromFile } from "./mdx";
 
 /* 
@@ -17,6 +21,7 @@ export const categoryCodes = [
   "mac",
   "cli",
   "cs",
+  "project",
 ] as const;
 export type CategoryCode = typeof categoryCodes[number];
 

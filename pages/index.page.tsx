@@ -4,14 +4,14 @@ import Title from "@/components/typography/Title";
 import Spacer from "@/components/Space";
 import Space from "@/components/Space";
 import Button from "@/components/button/Button";
-// import Space from "@/components/Space";
+
 
 const IndexPage: NextPage = () => {
   return (
     <>
       <div className="wrapper">
         <Space size="xl"></Space>
-        {/* <Icon id="grin" size="lg"></Icon> */}
+        {/* <Icon id="nextbus" size="lg"></Icon> */}
         {/* <Spacer size="md"></Spacer> */}
 
         <Title>Parth Kabra</Title>

@@ -1,7 +1,7 @@
 ---
 title: Contemplations
 description: Thoughts for projects and ideas
-lastUpdated: 2021-04-03
+updatedAt: 2021-04-03
 icon: brain
 ---
 

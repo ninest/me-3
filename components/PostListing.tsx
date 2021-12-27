@@ -21,7 +21,7 @@ const PostListing = ({
         )}
       >
         <div className="min-w-[6rem] text-sm font-semibold text-gray">
-          {formatShortDate(new Date(frontmatter.lastUpdated))}
+          {formatShortDate(new Date(frontmatter.updatedAt))}
         </div>
         <h3 className="font-semibold text-gray">{frontmatter.title}</h3>
       </SmartLink>

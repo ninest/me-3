@@ -11,11 +11,15 @@ export const categories: Category[] = [
   { code: "mac", name: "Mac" },
   { code: "cli", name: "CLI" },
   { code: "cs", name: "Computer Science" },
+  { code: "project", name: "Project" },
 ];
 
 export const posts: MarkdownPageData[] = [
   // Blog posts
   { categoryCodes: ["blog"], slug: "contemplations" },
+  
+  // Projects
+  { categoryCodes: ["project"], slug: "nextbussg" },
 
   // CS posts
   // { categoryCodes: ["cs", "blog"], slug: "searching" },

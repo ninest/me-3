@@ -10,7 +10,7 @@ export interface PagePreviewProps extends HTMLAttributes<HTMLDivElement> {
   icon: string;
   url: string;
   title: string;
-  description: string;
+  description?: string;
 
   size?: "base" | "lg";
   ghost?: boolean;
@@ -44,7 +44,7 @@ const PagePreview = ({
         )}
       >
         <div>
-          <Spacer size="sm"></Spacer>
+          {/* <Spacer size="sm"></Spacer> */}
           <Icon className="text-gray-light" id={icon} size="base"></Icon>
         </div>
         <div>
@@ -56,14 +56,15 @@ const PagePreview = ({
           >
             {title}
           </h3>
-          {/* <Spacer size="xs"></Spacer> */}
-          <p
-            className={clsx("text-gray", {
-              "text-xs": size == "base",
-            })}
-          >
-            {description}
-          </p>
+          {description && (
+            <p
+              className={clsx("text-gray", {
+                "text-xs": size == "base",
+              })}
+            >
+              {description}
+            </p>
+          )}
         </div>
       </SmartLink>
     </>

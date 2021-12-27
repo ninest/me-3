@@ -1,9 +1,13 @@
+import Image from "next/image";
 import clsx from "clsx";
-import { HTMLAttributes } from "react";
+import { HTMLAttributes, ReactNode } from "react";
 import { IconType } from "react-icons";
 import {
+  FaAppStoreIos,
   FaBrain,
+  FaFirefox,
   FaGithub,
+  FaGooglePlay,
   FaGrinBeam,
   FaMoon,
   FaPencilAlt,
@@ -28,15 +32,37 @@ const Icon = ({ children, size = "base", id, ...props }: IconProps) => {
     },
     props.className
   );
+
   if (children) {
     // Emoji icon
     return <div className={className}>{children}</div>;
-  } else if (id) {
-    const Component = iconMap[id];
+  } else if (iconMap.hasOwnProperty(id!)) {
+    const Component = iconMap[id!];
     return (
       <>
         <Component className={className}></Component>
       </>
+    );
+  } else if (svgIconMap.hasOwnProperty(id!)) {
+    let width = 30;
+    switch (size) {
+      case "sm":
+        width = 30;
+        break;
+      case "base":
+        width = 35;
+        break;
+      case "md":
+        width = 40;
+        break;
+      case "lg":
+        width = 60;
+        break;
+    }
+    return (
+      <div>
+        <Image src={svgIconMap[id!]} height={width} width={width}></Image>
+      </div>
     );
   } else return <></>;
 };
@@ -51,4 +77,11 @@ const iconMap: Record<string, IconType> = {
   moon: FaMoon,
   sun: FaSun,
   brain: FaBrain,
+  playstore: FaGooglePlay,
+  appstore: FaAppStoreIos,
+  web: FaFirefox,
+};
+
+const svgIconMap: Record<string, string> = {
+  nextbus: "/icons/nextbus.svg",
 };
