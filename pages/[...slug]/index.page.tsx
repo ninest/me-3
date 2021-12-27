@@ -51,7 +51,7 @@ export const getServerSideProps = async ({
     };
   } else {
     // Markdown page
-    console.log(slug)
+
     const markdownPage: MarkdownPageData = await getPost(
       listToFilepath(slug as String[])
     );

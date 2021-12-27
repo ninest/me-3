@@ -28,7 +28,7 @@ const CodeBlock = ({ language, code = "", ...props }: CodeBlockProps) => {
         <pre
           className={clsx(
             // TODO: can we put padding on the right side of the overscrolled side?
-            "p-md font-mono text-xs md:rounded-md overflow-x-scroll max-w-screen",
+            "p-md font-mono text-xs md:rounded-md overflow-x-scroll ",
             {
               "bg-gray-200": isPcode,
               "bg-gray-900": !isPcode,

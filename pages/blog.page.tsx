@@ -17,7 +17,7 @@ export const getServerSideProps = async ({
         post.categoryCodes.includes("work-experience")
       )
   );
-  console.log(postsList);
+
   const pages = await getPostsFromList(postsList);
   return { props: { pages } };
 };
