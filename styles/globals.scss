@@ -6,3 +6,12 @@
 @import "./prose.scss";
 @import "./colors.scss";
 
+/* Katex styling */
+.katex-html {
+  // Hide area hidden
+  @apply hidden;
+}
+
+.katex {
+  @apply text-lg;
+}

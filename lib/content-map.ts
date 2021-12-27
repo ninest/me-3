@@ -22,6 +22,10 @@ export const categories: IncompleteCategory[] = [
 export const posts: MarkdownPageData[] = [
   // Blog posts
   { categoryCodes: ["blog"], slug: "contemplations" },
+  { categoryCodes: ["blog"], slug: "account-hacked" },
+
+  /* CLI */
+  { categoryCodes: ["cli"], slug: "youtube-dl" },
 
   // Projects
   { categoryCodes: ["project"], slug: "nextbussg" },
@@ -41,15 +45,28 @@ export const posts: MarkdownPageData[] = [
 
   /* Python */
   { categoryCodes: ["python"], slug: "black-installation-usage" },
-  { categoryCodes: ["python","vscode"], slug: "vscode-interactive-pyenv-venv" },
-  
+  {
+    categoryCodes: ["python", "vscode"],
+    slug: "vscode-interactive-pyenv-venv",
+  },
+
   /* Nextjs */
   { categoryCodes: ["nextjs"], slug: "custom-routing" },
-  
+
   /* Mac */
   { categoryCodes: ["mac"], slug: "clear-space" },
+  { categoryCodes: ["mac"], slug: "remove-screenshot-shadow" },
+  { categoryCodes: ["mac"], slug: "say" },
+  { categoryCodes: ["mac"], slug: "terminal-games" },
+
+  /* HTML */
+  { categoryCodes: ["html"], slug: "google-forms-embed" },
+
+  /* Git */
+  { categoryCodes: ["git"], slug: "shortlog" },
+  { categoryCodes: ["git"], slug: "undo-commits" },
 
   // CS posts
-  // { categoryCodes: ["cs", "blog"], slug: "searching" },
+  // { categoryCodes: ["cs", "blog"], slug: "selection-sort" },
 ];
 export const featuredPosts: MarkdownPageData[] = [];

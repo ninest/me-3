@@ -51,10 +51,12 @@ export const getServerSideProps = async ({
     };
   } else {
     // Markdown page
+    console.log(slug)
     const markdownPage: MarkdownPageData = await getPost(
       listToFilepath(slug as String[])
     );
 
+    // TODO: what if the first part actually isn't a cat code?
     let category = null;
     if (slug.length > 1) {
       const categoryCode = slug![0] as CategoryCode;

@@ -1,6 +1,8 @@
 import path from "path";
 import { bundleMDX } from "mdx-bundler";
 import remarkCodeMeta from "remark-code-meta";
+import math from "remark-math";
+import katex from "rehype-katex";
 
 import { readFile } from "@/lib/file";
 
@@ -31,15 +33,16 @@ export async function mdxFromFile<T>(filepath: string) {
   }
 
   const { code, frontmatter } = await bundleMDX({
-    source, 
+    source,
     cwd: path.join(process.cwd(), "/content"),
     xdmOptions(options, frontmatter) {
       // Return xdmOptions: https://github.com/kentcdodds/mdx-bundler#xdmoptions
       options.remarkPlugins = [
         ...(options.remarkPlugins ?? []),
         remarkCodeMeta,
+        math,
       ];
-      options.rehypePlugins = [...(options.rehypePlugins ?? [])];
+      options.rehypePlugins = [...(options.rehypePlugins ?? []), katex];
       return options;
     },
     esbuildOptions: (options) => {

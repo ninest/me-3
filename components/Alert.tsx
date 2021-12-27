@@ -16,8 +16,8 @@ interface AlertProps extends HTMLAttributes<HTMLDivElement> {
 const Alert = ({
   title,
   children,
-  variant="gray",
-  open = true,
+  variant = "gray",
+  open = false,
   ...props
 }: AlertProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(open);
@@ -57,7 +57,9 @@ const Alert = ({
           )}
         ></FaChevronDown>
       </summary>
-      <div className="mt-base space-y-sm">{children}</div>
+      <div className="mt-base space-y-sm overflow-x-scroll">
+        {children}
+        </div>
     </details>
   );
 };

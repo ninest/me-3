@@ -26,7 +26,11 @@ const substitutedComponents = {
 
   /* General alerts */
   Alert: (props: any) => {
-    return <Alert {...props} className="mobile-full-bleed"></Alert>;
+    return (
+      // <div className="mobile-full-bleed ">
+        <Alert {...props} className="mobile-full-bleed"></Alert>
+      // </div>
+    );
   },
 
   /* Next image */

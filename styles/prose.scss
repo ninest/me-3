@@ -35,21 +35,15 @@
       @apply text-xl font-medium;
     }
 
-    // Code
-    // TODO: move to CodeBlock.tsx component?
     // pre {
-    //   @apply p-md md:rounded-md;
-    //   @apply font-mono text-xs;
     //   @apply overflow-x-scroll;
-
-    //   &.code {
-    //     @apply bg-gray-900;
-    //   }
-
-    //   &.pcode {
-    //     @apply bg-gray-200 #{!important};
-    //   }
     // }
+
+    .alert {
+      pre {
+        @apply w-full;
+      }
+    }
 
     .expandable-children {
       pre {
