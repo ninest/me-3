@@ -11,6 +11,7 @@ import {
   FaGrinBeam,
   FaMoon,
   FaPencilAlt,
+  FaRegFileAlt,
   FaSearch,
   FaSortNumericUp,
   FaSun,
@@ -80,6 +81,7 @@ const iconMap: Record<string, IconType> = {
   playstore: FaGooglePlay,
   appstore: FaAppStoreIos,
   web: FaFirefox,
+  filealt: FaRegFileAlt,
 };
 
 const svgIconMap: Record<string, string> = {
@@ -89,4 +91,7 @@ const svgIconMap: Record<string, string> = {
   shots: "/icons/shots.svg",
   typer: "/icons/typer.svg",
   uniquecode: "/icons/uniquecode.svg",
+  credr: "/icons/ccc.svg",
+  h3: "/icons/h3.svg",
+  saf: "/icons/saf.svg",
 };

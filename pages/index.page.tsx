@@ -12,25 +12,31 @@ export const getServerSideProps = async ({
   params,
 }: GetServerSidePropsContext) => {
   const projects = await getFullCategory("project");
+  const workExperience = await getFullCategory("work-experience");
 
   return {
-    props: { projects },
+    props: { projects, workExperience },
   };
 };
 
-const IndexPage = ({ projects }: { projects: Category }) => {
+interface IndexPageProps {
+  projects: Category;
+  workExperience: Category;
+}
+
+const IndexPage = ({ projects, workExperience }: IndexPageProps) => {
   return (
     <>
       <div className="wrapper">
         <Space size="xl"></Space>
-        {/* <Icon id="nextbus" size="lg"></Icon> */}
-        {/* <Spacer size="md"></Spacer> */}
 
         <Title>Parth Kabra</Title>
         <Spacer></Spacer>
 
         <div className="flex space-x-base">
-          <Button variant="primary" href="/about">Current Endeavors</Button>
+          <Button variant="primary" href="/about">
+            Current Endeavors
+          </Button>
           <Button href="/resume">Resume</Button>
         </div>
 
@@ -39,9 +45,28 @@ const IndexPage = ({ projects }: { projects: Category }) => {
         <article className="prose">
           <p>
             Hi! I'm a computer science student at <b>Northeastern University</b>
-            ! Please hire me.
+            with significant experience in app development. Please hire me.
           </p>
         </article>
+
+        <Spacer size="3xl"></Spacer>
+
+        <Title level={2}>Work Experience</Title>
+        <Spacer size="lg"></Spacer>
+
+        <section className="grid gap-xl grid-cols-1 md:grid-cols-2">
+          {workExperience.pages.map((page) => (
+            <PagePreview
+              key={`/${page.categoryCodes[0]}/${page.slug}`}
+              url={`/${page.categoryCodes[0]}/${page.slug}`}
+              icon={page.frontmatter?.icon!}
+              title={page.frontmatter?.title!}
+              description={page.frontmatter?.description}
+              size="lg"
+              ghost
+            ></PagePreview>
+          ))}
+        </section>
 
         <Spacer size="3xl"></Spacer>
 
@@ -51,8 +76,8 @@ const IndexPage = ({ projects }: { projects: Category }) => {
         <section className="grid gap-xl grid-cols-1 md:grid-cols-2">
           {projects.pages.map((page) => (
             <PagePreview
-              key={`/${page.categoryCodes[0]}/${page.slug}]`}
-              url={`/${page.categoryCodes[0]}/${page.slug}]`}
+              key={`/${page.categoryCodes[0]}/${page.slug}`}
+              url={`/${page.categoryCodes[0]}/${page.slug}`}
               icon={page.frontmatter?.icon!}
               title={page.frontmatter?.title!}
               description={page.frontmatter?.description}
@@ -61,6 +86,17 @@ const IndexPage = ({ projects }: { projects: Category }) => {
             ></PagePreview>
           ))}
         </section>
+
+        <Spacer size="3xl"></Spacer>
+
+        <Title level={2}>Interests</Title>
+        <Spacer size="lg"></Spacer>
+
+        <article className="prose">
+          <ul>
+            <li>Origami</li>
+          </ul>
+        </article>
       </div>
     </>
   );

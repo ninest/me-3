@@ -2,6 +2,7 @@ import Image from "next/image";
 import CodeBlock from "@/components/code/CodeBlock";
 import ExpandableCode from "@/components/code/ExpandableCode";
 import Alert from "@/components/Alert";
+import SmartLink from "../SmartLinks";
 
 const substitutedComponents = {
   /* Code */
@@ -34,9 +35,18 @@ const substitutedComponents = {
 
     return (
       <div className="flex justify-center mobile-full-bleed">
-        <Image {...props} src={src} className="md:rounded bg-gray-lightest"></Image>
+        <Image
+          {...props}
+          src={src}
+          className="md:rounded bg-gray-lightest"
+        ></Image>
       </div>
     );
+  },
+
+  /* A tags */
+  a: (props: any) => {
+    return <SmartLink href={props.href}>{props.children}</SmartLink>;
   },
 };
 

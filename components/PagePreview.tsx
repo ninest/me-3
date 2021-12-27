@@ -30,7 +30,7 @@ const PagePreview = ({
       <SmartLink
         href={url}
         className={clsx(
-          "rounded hover:bg-primary-lightest",
+          "block rounded hover:bg-primary-lightest",
 
           {
             "p-sm -m-sm": ghost,

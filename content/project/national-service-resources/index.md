@@ -1,6 +1,6 @@
 ---
 title: National Service Resources
-description: Portal to help NSFs
+description: Portal to help National Servicemen in Singapore
 updatedAt: 2021-12-27
 
 icon: nsr

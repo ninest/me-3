@@ -7,8 +7,8 @@ showContents: true
 
 ## Education
 
-**Northeastern University**: BS Computer Science (2021–2025)
-**IB Diploma**: May 2019, Singapore
+- **Northeastern University**: BS Computer Science (2021–2025)
+- **IB Diploma**: May 2019, Singapore
 
 ## Skills
 
@@ -19,30 +19,34 @@ showContents: true
 
 ## Work Experience
 
-### Singapore Armed Forces, Oct 2019–Aug 2021
+### Singapore Armed Forces
 
-**Software Development Lead**
+**Software Development Lead, Oct 2019–Aug 2021**
 
 - Lead the application development team tasked with automating and improving the overall efficiency of army processes, benefitting 5,000+ soldiers across Singapore and overseas
 - Oversaw the roll out of multiple major projects across Singapore; addressed numerous army units to onboard them and familiarize them with the applications
 - Responsibilities included leading the design, development, testing, deployment; worked with AWS, Firebase, Pandas, React, Vue, Nextjs, Netlify, Vercel
 - Also completed basic military training; built resilience and critical survival skills
 
-### Python Tutor, Dec 2020–Aug 2021
+### Python Tutor
+
+**Dec 2020–Aug 2021**
 
 - Teaching intermediate/advanced Python to college-bound students of ages 16–17
 - Enabled them to build their own apps using various libraries and APIs
 
-### H3Zoom.AI, Jun 2018–July 2018
+### H3Zoom.AI
+
+**Software Developer Intern, Jun 2018–July 2018**
 
 - Interned at this award-winning startup specializing in detecting faults in building infrastructure
 - Developed modules using machine learning and artificial intelligence in TensorFlow and Python,
   leveraging data analytics for videos and photos
 - Wrote a utility program that greatly reduced manual labor in classifying test data
 
-### CredR, Dec 2017
+### CredR
 
-**Software Developer Intern**
+**Software Developer Intern, Dec 2017**
 
 - Developed web applications, using Django and Python for a web marketplace selling used two-wheelers
 - Built a prototype web application making use of a database, that led to product development
@@ -77,3 +81,10 @@ showContents: true
 ### [DitchIT](/blog/contemplations)
 
 - Idea of app that detects potholes on roads using a mobile phone’s gyroscope and accelerometer
+
+## Interests
+
+- Origami
+- Running
+- Badminton
+- Piano
