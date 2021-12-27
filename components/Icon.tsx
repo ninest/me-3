@@ -84,4 +84,8 @@ const iconMap: Record<string, IconType> = {
 
 const svgIconMap: Record<string, string> = {
   nextbus: "/icons/nextbus.svg",
+  ninenine: "/icons/ninenine.svg",
+  nsr: "/icons/nsr.svg",
+  shots: "/icons/shots.svg",
+  typer: "/icons/typer.svg",
 };

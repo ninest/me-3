@@ -20,6 +20,11 @@ export const posts: MarkdownPageData[] = [
   
   // Projects
   { categoryCodes: ["project"], slug: "nextbussg" },
+  { categoryCodes: ["project"], slug: "ninenine" },
+  { categoryCodes: ["project"], slug: "national-service-resources" },
+  { categoryCodes: ["project"], slug: "shots" },
+  { categoryCodes: ["project"], slug: "typer" },
+  { categoryCodes: ["project"], slug: "uniquecode" },
 
   // CS posts
   // { categoryCodes: ["cs", "blog"], slug: "searching" },

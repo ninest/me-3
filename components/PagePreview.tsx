@@ -12,7 +12,7 @@ export interface PagePreviewProps extends HTMLAttributes<HTMLDivElement> {
   title: string;
   description?: string;
 
-  size?: "base" | "lg";
+  size?: "sm" | "base" | "lg";
   ghost?: boolean;
 }
 
@@ -37,8 +37,9 @@ const PagePreview = ({
             "p-md": !ghost,
           },
           {
-            "space-x-lg": size == "lg",
+            "space-x-sm": size == "sm",
             "space-x-base": size == "base",
+            "space-x-lg": size == "lg",
           },
           props.className
         )}
@@ -49,9 +50,10 @@ const PagePreview = ({
         </div>
         <div>
           <h3
-            className={clsx("font-medium  text-gray-darker", {
-              "text-lg": size == "lg",
+            className={clsx("font-medium  text-gray-dark", {
+              "text-sm": size == "sm",
               "text-base": size == "base",
+              "text-lg": size == "lg",
             })}
           >
             {title}

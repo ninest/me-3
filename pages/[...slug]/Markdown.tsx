@@ -10,6 +10,7 @@ import { formatDate } from "@/lib/date";
 import { Category, MarkdownPageData } from "@/types/content";
 import { getMDXComponent } from "mdx-bundler/client";
 import { NextSeo } from "next-seo";
+import SmartLink from "@/components/SmartLinks";
 
 const MarkdownPage = ({
   category,
@@ -31,16 +32,19 @@ const MarkdownPage = ({
           <span className="opacity-5">{frontmatter.title.slice(0, 2)}</span>
         </div>
 
-        {/* <Icon>✏️</Icon> */}
-
         <Icon id={frontmatter.icon} size="lg"></Icon>
         <Spacer></Spacer>
         <Title>{frontmatter.title}</Title>
-        <Spacer size="xs"></Spacer>
+
+        <p className="font-semibold text-lg text-gray-dark">
+          {frontmatter.description}
+        </p>
+        <Spacer size="md"></Spacer>
+
         <div className="font-display flex space-x-xs text-gray-dark">
           {category && (
             <>
-              <span>{category.name}</span>
+              <SmartLink href={`/${category.code}`}>{category.name}</SmartLink>
               <span>{"·"}</span>
               <span className="text-gray">
                 {formatDate(new Date(frontmatter.updatedAt))}
@@ -48,6 +52,19 @@ const MarkdownPage = ({
             </>
           )}
         </div>
+
+        {/* For projects, show links at the top too */}
+        {category.code === "project" && (
+          <>
+            <Spacer size="xl"></Spacer>
+            <LinkedPages
+              ghost
+              grid
+              size="sm"
+              pages={frontmatter.linkedPages}
+            ></LinkedPages>
+          </>
+        )}
       </Highlight>
 
       <Spacer size="xl"></Spacer>
