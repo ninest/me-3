@@ -7,9 +7,7 @@ interface AlertProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode;
 
   // types
-  info?: boolean;
-  error?: boolean;
-  warning?: boolean;
+  variant?: "primary" | "error" | "gray" | "warning";
 
   // default state
   open?: boolean;
@@ -18,10 +16,8 @@ interface AlertProps extends HTMLAttributes<HTMLDivElement> {
 const Alert = ({
   title,
   children,
-  info,
-  error,
-  warning,
-  open = false,
+  variant,
+  open = true,
   ...props
 }: AlertProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(open);
@@ -39,17 +35,17 @@ const Alert = ({
         "p-base border-l-8",
         "md:rounded md:rounded-r-lg",
         {
-          "border-gray bg-gray-lightest": !info && !error,
-          "border-primary bg-primary-lighter": info,
-          "border-error bg-error-light": error,
-          "border-warning bg-warning-light": warning,
+          "border-gray bg-gray-lightest": variant == "gray",
+          "border-primary bg-primary-lighter": variant == "primary",
+          "border-error bg-error-light": variant == "error",
+          "border-warning bg-warning-light": variant == "warning",
         },
         props.className
       )}
     >
       <summary
         onClick={toggle}
-        className="list-none font-medium flex items-center justify-between space-x-base"
+        className="list-none font-semibold text-lg flex items-center justify-between space-x-base"
       >
         <div>{title}</div>
         <FaChevronDown

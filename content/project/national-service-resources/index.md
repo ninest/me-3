@@ -23,6 +23,13 @@ Having an older brother doing NS just two years before, it was a bit easier for 
 
 The website does not have any of its own content, rather it only brings all relevant information out there under a common and easy to use portal.
 
+<Alert title="Achievements" variant="primary" open>
+
+- The Reddit post announcing this website was the most upvoted post in the community for over 3 months after being posted.
+- The portal receives over 500 monthly views.
+
+</Alert>
+
 ## Technologies used
 
 I used Nuxt, a framework for Vue. Nuxt improves Vue through a variety of ways including enhancing performance and allowing for search engine optimization.

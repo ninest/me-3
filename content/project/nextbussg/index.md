@@ -31,7 +31,7 @@ I was never happy with the bus apps I used. All I needed was a list of bus timin
 
 All other solutions required too many interactions, and it always used to take me a minute or more to find what I was looking for. It was quite frustrating to me that there was nothing that could get you the information you want at your fingertips.
 
-<Alert title="Achievements" primary open>
+<Alert title="Achievements" variant="primary" open>
 
 My code received rave reviews by the [Learn Flutter Code](https://www.youtube.com/watch?v=IoueVJmXvsc) YouTube channel for the UI design and backend.
 

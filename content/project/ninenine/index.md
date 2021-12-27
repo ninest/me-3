@@ -33,7 +33,11 @@ import desktop from './project/ninenine/images/desktop.png'
 
 <Image src={desktop} height={2257} width={4458} />
 
-This was my first successful web and mobile app, that enabled me to learn all of what it takes to publish on the Play Store and App Store.
+<Alert title="Achievements" variant="primary" open>
+
+The Android app garnered over **12,000** installs.
+
+</Alert>
 
 ## Why I created it
 

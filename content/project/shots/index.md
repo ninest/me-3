@@ -31,6 +31,10 @@ import e2 from './project/shots/images/shots-example-2.png'
   <Image src={e2} height={2688} width={1242} />
 </div>
 
+<Alert title="Achievements" variant="primary" open>
+The project has 100+ stars on GitHub.
+</Alert>
+
 
 In developing this app, I published my [Swiping Cards Plugin](https://github.com/ninest/swipeable_card) for others to use on their own project. It currently has 25+ likes, 90+ Pub Points, and has an overall popularity of 80%.
 
