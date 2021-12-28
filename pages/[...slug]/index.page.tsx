@@ -7,7 +7,7 @@ import {
 } from "@/types/content";
 
 import { getPost, getPostsFromList } from "@/lib/content";
-import { categories, posts } from "@/lib/content-map";
+import { categories, otherPages, posts } from "@/lib/content-map";
 
 import MarkdownPage from "@/pages/[...slug]/Markdown";
 import ContentListPage from "@/pages/[...slug]/CategoryList";
@@ -21,7 +21,11 @@ export const getStaticPaths: GetStaticPaths = (context) => {
   const pagePaths = posts.map(
     (post) => `/${listToFilepath([post.categoryCodes[0], post.slug])}`
   );
-  return { paths: [...pagePaths, ...categoryPaths], fallback: false };
+  const otherPagePaths = otherPages.map((slug) => `/${slug}`);
+  return {
+    paths: [...pagePaths, ...categoryPaths, ...otherPagePaths],
+    fallback: false,
+  };
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {

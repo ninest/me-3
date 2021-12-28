@@ -69,4 +69,7 @@ export const posts: MarkdownPageData[] = [
   // CS posts
   // { categoryCodes: ["cs", "blog"], slug: "selection-sort" },
 ];
+
+export const otherPages = ["about", "contact"];
+
 export const featuredPosts: MarkdownPageData[] = [];
