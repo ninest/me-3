@@ -1,4 +1,4 @@
-import useColorTheme from "@/pages/hooks/theme";
+
 import clsx from "clsx";
 
 import { HTMLAttributes } from "react";
@@ -17,7 +17,7 @@ const Button = ({
   children,
   ...props
 }: ButtonProps) => {
-  const { isLightTheme, isDarkTheme } = useColorTheme();
+  // const { isLightTheme, isDarkTheme } = useColorTheme();
 
   const Element = (
     <button

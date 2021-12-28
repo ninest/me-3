@@ -1,12 +1,13 @@
-
+import { useTheme } from "@/lib/theme";
 import Icon from "./Icon";
 import SmartLink from "./SmartLinks";
 
 const Navbar = () => {
-  const { theme, setTheme } = useTheme();
+  // const { theme, setTheme } = useTheme();
+  const { currentTheme, setTheme } = useTheme();
 
   const toggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light");
+    setTheme(currentTheme === "light" ? "dark" : "light");
   };
 
   return (
@@ -48,7 +49,7 @@ const Navbar = () => {
 
             <li>
               <button onClick={toggleTheme}>
-                {theme === "light" ? (
+                {currentTheme === "light" ? (
                   <Icon id="moon" size="xs" />
                 ) : (
                   <Icon id="sun" size="xs" />

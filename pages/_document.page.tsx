@@ -21,6 +21,12 @@ class MyDocument extends Document {
         </Head>
         <body className="bg-light">
           <Main />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `document.body.dataset.theme = window.localStorage.getItem("theme") || "light";
+              console.log("Hello")`,
+            }}
+          ></script>
           <NextScript />
         </body>
       </Html>
