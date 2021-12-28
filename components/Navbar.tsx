@@ -1,4 +1,4 @@
-import { useTheme } from "next-themes";
+
 import Icon from "./Icon";
 import SmartLink from "./SmartLinks";
 

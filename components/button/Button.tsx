@@ -1,6 +1,6 @@
 import useColorTheme from "@/pages/hooks/theme";
 import clsx from "clsx";
-import { useTheme } from "next-themes";
+
 import { HTMLAttributes } from "react";
 import SmartLink from "../SmartLinks";
 
@@ -30,10 +30,8 @@ const Button = ({
         },
         "focus:ring ring-offset-2",
         {
-          "bg-gray-lightest text-gray-darkest ring-gray-dark":
-            variant === "gray" && isLightTheme,
-          "bg-gray-light text-gray-darkest ring-gray-dark":
-            variant === "gray" && isDarkTheme,
+          "bg-gray-lightest text-gray-darkest ring-gray-darker":
+            variant === "gray",
 
           "bg-primary text-primary-lightest ring-primary-light":
             variant === "primary",
