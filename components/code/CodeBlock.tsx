@@ -39,12 +39,13 @@ const CodeBlock = ({ language, code = "", ...props }: CodeBlockProps) => {
         >
           {tokens.map((line, i) => {
             return (
-              <div {...getLineProps({ line, key: i })}>
+              <div key={i} {...getLineProps({ line, key: i })}>
                 {line.map((token, key) => {
                   /* Comments in pcode should be lighter */
                   const isComment = token.types.includes("comment");
                   return (
                     <span
+                    key={key}
                       {...getTokenProps({ token, key })}
                       className={clsx({
                         "text-gray-500 italic font-medium":

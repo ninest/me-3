@@ -9,7 +9,7 @@ import { Category } from "@/types/content";
 import PagePreview from "@/components/PagePreview";
 import { pageUrl } from "@/lib/content/page-url";
 
-export const getServerSideProps = async ({
+export const getStaticProps = async ({
   params,
 }: GetServerSidePropsContext) => {
   const projects = await getFullCategory("project");
@@ -47,7 +47,7 @@ const IndexPage = ({ projects, workExperience }: IndexPageProps) => {
 
         <article className="prose">
           <p>
-            Hi! I'm a computer science student at <b>Northeastern University</b>{" "}
+            Hi! I{"'"}m a computer science student at <b>Northeastern University</b>{" "}
             with significant experience in app development. Please hire me.
           </p>
         </article>

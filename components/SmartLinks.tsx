@@ -29,7 +29,7 @@ const SmartLink = ({
       </Link>
     );
 
-  return <a {...props} className={className} href={href} target="_blank" rel="noopener" />;
+  return <a {...props} className={className} href={href} target="_blank" rel="noreferrer" />;
 };
 
 export default SmartLink;

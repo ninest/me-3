@@ -1,25 +1,30 @@
 import { listToFilepath } from "@/lib/file";
-import type { GetServerSidePropsContext } from "next";
+import type { GetStaticPaths, GetStaticProps } from "next";
 import {
   Category,
   IncompleteCategory,
   MarkdownPageData,
 } from "@/types/content";
 
-import {
-  CategoryCode,
-  categoryCodes,
-  getPost,
-  getPostsFromList,
-} from "@/lib/content";
+import { getPost, getPostsFromList } from "@/lib/content";
 import { categories, posts } from "@/lib/content-map";
 
 import MarkdownPage from "@/pages/[...slug]/Markdown";
 import ContentListPage from "@/pages/[...slug]/CategoryList";
+import { CategoryCode, categoryCodes } from "@/types/category";
 
-export const getServerSideProps = async ({
-  params,
-}: GetServerSidePropsContext) => {
+export const getStaticPaths: GetStaticPaths = (context) => {
+  const categoryPaths = categoryCodes
+    // Remove blog post because it's custom
+    .filter((code) => code !== "blog")
+    .map((code) => `/${code}`);
+  const pagePaths = posts.map(
+    (post) => `/${listToFilepath([post.categoryCodes[0], post.slug])}`
+  );
+  return { paths: [...pagePaths, ...categoryPaths], fallback: false };
+};
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
   const slug = params!.slug as string[];
 
   /* 
@@ -67,6 +72,8 @@ export const getServerSideProps = async ({
     };
   }
 };
+
+/* --- */
 
 const ContentPage = ({
   markdownPage,

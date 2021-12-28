@@ -4,12 +4,13 @@ import Title from "@/components/typography/Title";
 import { getAllPages, getPostsFromList } from "@/lib/content";
 import { posts } from "@/lib/content-map";
 import { MarkdownPageData } from "@/types/content";
-import { GetServerSidePropsContext } from "next";
+import {
+
+  GetStaticProps,
+} from "next";
 import { NextSeo } from "next-seo";
 
-export const getServerSideProps = async ({
-  params,
-}: GetServerSidePropsContext) => {
+export const getStaticProps: GetStaticProps = async ({ params }) => {
   const postsList = posts.filter(
     (post) =>
       !(
