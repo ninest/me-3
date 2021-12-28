@@ -70,6 +70,6 @@ export const posts: MarkdownPageData[] = [
   // { categoryCodes: ["cs", "blog"], slug: "selection-sort" },
 ];
 
-export const otherPages = ["about", "contact"];
+export const otherPages = ["about"];
 
 export const featuredPosts: MarkdownPageData[] = [];

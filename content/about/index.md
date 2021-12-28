@@ -2,7 +2,7 @@
 title: About Me
 updatedAt: 2021-11-13
 description: More about me
-showContents: true
+# showContents: true
 ---
 
 I'm a computer science student at **Northeastern University**. I'm currently searching for internships for Summer 2022.

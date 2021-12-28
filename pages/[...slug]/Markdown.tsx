@@ -27,45 +27,11 @@ const MarkdownPage = ({
   return (
     <>
       <NextSeo title={frontmatter.title}></NextSeo>
-      <Highlight size="lg" theme="gray" className="wrapper relative">
-        <div className="absolute font-black" style={{ fontSize: `10rem` }}>
-          <span className="opacity-5">{frontmatter.title.slice(0, 2)}</span>
-        </div>
-
-        <Icon id={frontmatter.icon} size="lg"></Icon>
-        <Spacer></Spacer>
-        <Title>{frontmatter.title}</Title>
-
-        <p className="font-semibold text-lg text-gray-dark">
-          {frontmatter.description}
-        </p>
-        <Spacer size="md"></Spacer>
-
-        <div className="font-display flex space-x-xs text-gray-dark">
-          {category && (
-            <>
-              <SmartLink href={`/${category.code}`}>{category.name}</SmartLink>
-              <span>{"·"}</span>
-              <span className="text-gray">
-                {formatDate(new Date(frontmatter.updatedAt))}
-              </span>
-            </>
-          )}
-        </div>
-
-        {/* For projects, show links at the top too */}
-        {category?.code === "project" && (
-          <>
-            <Spacer size="xl"></Spacer>
-            <LinkedPages
-              ghost
-              grid
-              size="sm"
-              pages={frontmatter.linkedPages}
-            ></LinkedPages>
-          </>
-        )}
-      </Highlight>
+      <Highlight
+        className="wrapper relative"
+        frontmatter={frontmatter}
+        category={category}
+      ></Highlight>
 
       <Spacer size="xl"></Spacer>
 

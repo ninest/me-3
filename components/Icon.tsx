@@ -14,6 +14,7 @@ import {
   FaGooglePlay,
   FaGrinBeam,
   FaImages,
+  FaLinkedin,
   FaMoon,
   FaPencilAlt,
   FaPython,
@@ -106,6 +107,7 @@ const iconMap: Record<string, IconType> = {
   git: FaGitAlt,
   python: FaPython,
   shield: FaShieldAlt,
+  linkedin: FaLinkedin,
 };
 
 const svgIconMap: Record<string, string> = {

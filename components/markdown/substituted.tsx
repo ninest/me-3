@@ -3,6 +3,7 @@ import CodeBlock from "@/components/code/CodeBlock";
 import ExpandableCode from "@/components/code/ExpandableCode";
 import Alert from "@/components/Alert";
 import SmartLink from "../SmartLinks";
+import Button from "../button/Button";
 
 const substitutedComponents = {
   /* Code */
@@ -28,7 +29,7 @@ const substitutedComponents = {
   Alert: (props: any) => {
     return (
       // <div className="mobile-full-bleed ">
-        <Alert {...props} className="mobile-full-bleed"></Alert>
+      <Alert {...props} className="mobile-full-bleed"></Alert>
       // </div>
     );
   },
@@ -51,6 +52,11 @@ const substitutedComponents = {
   /* A tags */
   a: (props: any) => {
     return <SmartLink href={props.href}>{props.children}</SmartLink>;
+  },
+
+  /* Button */
+  Button: (props: any) => {
+    return <Button {...props} />;
   },
 };
 

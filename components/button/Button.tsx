@@ -1,19 +1,21 @@
-
 import clsx from "clsx";
 
 import { HTMLAttributes } from "react";
+import Icon from "../Icon";
 import SmartLink from "../SmartLinks";
 
 interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
   href?: string;
   size?: "sm" | "md" | "lg";
   variant?: "primary" | "error" | "gray";
+  icon?: string;
 }
 
 const Button = ({
   href,
   size = "md",
   variant = "gray",
+  icon,
   children,
   ...props
 }: ButtonProps) => {
@@ -38,15 +40,28 @@ const Button = ({
 
           "bg-error text-error-lightest": variant === "error",
         },
+
         props.className
       )}
+      onClick={props.onClick}
     >
-      {children}
+      <div
+        className={clsx("flex justify-center", {
+          "flex items-center space-x-base": icon,
+        })}
+      >
+        {icon && <Icon id={icon}></Icon>}
+        <div>{children}</div>
+      </div>
     </button>
   );
 
   if (href) {
-    return <SmartLink href={href}>{Element}</SmartLink>;
+    return (
+      <SmartLink className="block" href={href}>
+        {Element}
+      </SmartLink>
+    );
   }
   return Element;
 };

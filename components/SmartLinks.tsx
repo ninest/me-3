@@ -1,8 +1,7 @@
-import type { NextComponentType } from "next";
-import clsx from "clsx";
+import { AnchorHTMLAttributes } from "react";
+import { useRouter } from "next/router";
 import Link from "next/link";
-import { AnchorHTMLAttributes, FC } from "react";
-import { useRouter } from "next/dist/client/router";
+import clsx from "clsx";
 
 interface SmartLinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   href: string;
@@ -23,13 +22,21 @@ const SmartLink = ({
   });
 
   if (href[0] === "/")
-  return (
+    return (
       <Link href={href}>
         <a {...props} className={className} />
       </Link>
     );
 
-  return <a {...props} className={className} href={href} target="_blank" rel="noreferrer" />;
+  return (
+    <a
+      {...props}
+      className={className}
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+    />
+  );
 };
 
 export default SmartLink;
