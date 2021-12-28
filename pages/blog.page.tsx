@@ -35,10 +35,12 @@ const BlogListPage = ({ pages }: { pages: MarkdownPageData[] }) => {
           {pages.map((page) => (
             <PagePreview
               key={`/${page.categoryCodes[0]}/${page.slug}`}
-              url={`/${page.categoryCodes[0]}/${page.slug}`}
-              icon={page.frontmatter?.icon!}
-              title={page.frontmatter?.title!}
-              description={page.frontmatter?.description}
+              data={{
+                url: `/${page.categoryCodes[0]}/${page.slug}`,
+                icon: page.frontmatter?.icon!,
+                title: page.frontmatter?.title!,
+                description: page.frontmatter?.description,
+              }}
               size="lg"
               ghost
             ></PagePreview>

@@ -7,6 +7,7 @@ import Button from "@/components/button/Button";
 import { getFullCategory } from "@/lib/content";
 import { Category } from "@/types/content";
 import PagePreview from "@/components/PagePreview";
+import { pageUrl } from "@/lib/content/page-url";
 
 export const getServerSideProps = async ({
   params,
@@ -33,11 +34,13 @@ const IndexPage = ({ projects, workExperience }: IndexPageProps) => {
         <Title>Parth Kabra</Title>
         <Spacer></Spacer>
 
-        <div className="flex space-x-base">
-          <Button variant="primary" href="/about">
+        <div className="flex flex-col space-y-base md:flex-row md:space-y-0 md:space-x-base">
+          <Button className="w-full md:w-auto" variant="primary" href="/about">
             Current Endeavors
           </Button>
-          <Button href="/resume">Resume</Button>
+          <Button className="w-full md:w-auto" href="/resume">
+            Resume
+          </Button>
         </div>
 
         <Spacer size="md"></Spacer>
@@ -57,11 +60,13 @@ const IndexPage = ({ projects, workExperience }: IndexPageProps) => {
         <section className="grid gap-xl grid-cols-1 md:grid-cols-2">
           {workExperience.pages.map((page) => (
             <PagePreview
-              key={`/${page.categoryCodes[0]}/${page.slug}`}
-              url={`/${page.categoryCodes[0]}/${page.slug}`}
-              icon={page.frontmatter?.icon!}
-              title={page.frontmatter?.title!}
-              description={page.frontmatter?.description}
+              key={pageUrl(page)}
+              data={{
+                url: pageUrl(page),
+                icon: page.frontmatter?.icon!,
+                title: page.frontmatter?.title!,
+                description: page.frontmatter?.description,
+              }}
               size="lg"
               ghost
             ></PagePreview>
@@ -76,11 +81,13 @@ const IndexPage = ({ projects, workExperience }: IndexPageProps) => {
         <section className="grid gap-xl grid-cols-1 md:grid-cols-2">
           {projects.pages.map((page) => (
             <PagePreview
-              key={`/${page.categoryCodes[0]}/${page.slug}`}
-              url={`/${page.categoryCodes[0]}/${page.slug}`}
-              icon={page.frontmatter?.icon!}
-              title={page.frontmatter?.title!}
-              description={page.frontmatter?.description}
+              key={pageUrl(page)}
+              data={{
+                url: pageUrl(page),
+                icon: page.frontmatter?.icon!,
+                title: page.frontmatter?.title!,
+                description: page.frontmatter?.description,
+              }}
               size="lg"
               ghost
             ></PagePreview>

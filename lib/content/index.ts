@@ -1,3 +1,4 @@
+import { CategoryCode } from "@/types/category";
 import {
   Category,
   Frontmatter,
@@ -5,29 +6,13 @@ import {
   IncompleteMarkdownPageData,
   MarkdownPageData,
 } from "@/types/content";
-import { categories, posts } from "./content-map";
-import { mdxFromFile } from "./mdx";
+import { categories, posts } from "../content-map";
+import { mdxFromFile } from "../mdx";
 
 /* 
 Code: category name for content/posts the website contains 
 Reference: https://stackoverflow.com/a/45257357/8677167
 */
-
-export const categoryCodes = [
-  "blog",
-  "python",
-  "javascript",
-  "nextjs",
-  "vscode",
-  "html",
-  "git",
-  "mac",
-  "cli",
-  "cs",
-  "project",
-  "work-experience",
-] as const;
-export type CategoryCode = typeof categoryCodes[number];
 
 /* 
 Receive a list of md page data (from content-map.ts) and add ALL fields 
@@ -88,3 +73,5 @@ export async function getAllPages(): Promise<MarkdownPageData[]> {
   const pages: MarkdownPageData[] = await getPostsFromList(posts);
   return pages;
 }
+
+

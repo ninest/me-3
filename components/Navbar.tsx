@@ -18,7 +18,7 @@ const Navbar = () => {
           <span className="hidden md:block">Parth Kabra</span>
         </SmartLink>
         <nav className="">
-          <ul className="flex space-x-base text-gray">
+          <ul className="flex items-baseline space-x-base text-gray">
             <li>
               <SmartLink
                 href="/blog"
@@ -50,9 +50,9 @@ const Navbar = () => {
             <li>
               <button onClick={toggleTheme}>
                 {currentTheme === "light" ? (
-                  <Icon id="moon" size="xs" />
+                  <Icon id="moon" size="xxxs" />
                 ) : (
-                  <Icon id="sun" size="xs" />
+                  <Icon id="sun" size="xxxs" />
                 )}
               </button>
             </li>

@@ -58,7 +58,9 @@ module.exports = {
           lighter: "var(--indigo-200)",
           light: "var(--indigo-400)",
           DEFAULT: "var(--indigo-600)",
-          dark: "var(--indigo-800)",
+          dark: "var(--indigo-700)",
+          darker: "var(--indigo-800)",
+          darkest: "var(--indigo-900)",
         },
         error: {
           light: "var(--red-300)",

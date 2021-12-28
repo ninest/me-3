@@ -1,4 +1,4 @@
-import { CategoryCode } from "@/lib/content";
+import { CategoryCode } from "./category";
 
 export interface Category {
   code: CategoryCode;

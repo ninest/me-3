@@ -29,7 +29,7 @@ import {
 import { BsFillTerminalFill } from "react-icons/bs";
 
 export interface IconProps extends HTMLAttributes<HTMLDivElement> {
-  size?: "xs" | "sm" | "base" | "md" | "lg";
+  size?: "xxxs" | "xxs" | "xs" | "sm" | "base" | "md" | "lg";
   id?: string;
 }
 
@@ -37,11 +37,12 @@ const Icon = ({ children, size = "base", id, ...props }: IconProps) => {
   const className = clsx(
     "text-gray",
     {
-      "text-6xl": size == "lg",
-      "text-5xl": size == "md",
-      "text-4xl": size == "base",
-      "text-3xl": size == "sm",
-      "text-2xl": size == "xs",
+      "text-5xl": size == "lg",
+      "text-4xl": size == "md",
+      "text-3xl": size == "base",
+      "text-2xl": size == "sm",
+      "text-xl": size == "xs",
+      "text-lg": size == "xxs",
     },
     props.className
   );
@@ -60,16 +61,16 @@ const Icon = ({ children, size = "base", id, ...props }: IconProps) => {
     let width = 30;
     switch (size) {
       case "sm":
-        width = 35;
+        width = 25;
         break;
       case "base":
-        width = 40;
+        width = 35;
         break;
       case "md":
-        width = 50;
+        width = 40;
         break;
       case "lg":
-        width = 60;
+        width = 50;
         break;
     }
     return (

@@ -5,35 +5,37 @@ import { MarkdownPageData } from "@/types/content";
 import Icon, { IconProps } from "./Icon";
 import SmartLink from "./SmartLinks";
 import Spacer from "./Space";
+import { useTheme } from "@/lib/theme";
 
 export interface PagePreviewProps extends HTMLAttributes<HTMLDivElement> {
-  icon: string;
-  iconSize?: IconProps["size"];
-  url: string;
-  title: string;
-  description?: string;
+  data: {
+    icon: string;
+    iconSize?: IconProps["size"];
+    url: string;
+    title: string;
+    description?: string;
+  };
 
   size?: "sm" | "base" | "lg";
   ghost?: boolean;
 }
 
 const PagePreview = ({
-  icon,
-  iconSize = "sm",
-  url,
-  title,
-  description,
+  data,
   ghost = false,
   size = "base",
   ...props
 }: PagePreviewProps) => {
+  const { icon, iconSize = "base", url, title, description } = data;
+
+  const { isLightTheme, isDarkTheme } = useTheme();
+
   return (
     <>
       <SmartLink
         href={url}
         className={clsx(
-          "block rounded hover:bg-primary-lightest",
-
+          "block rounded hover:bg-primary-lightest transition-colors",
           {
             "p-sm -m-sm": ghost,
             "p-md": !ghost,

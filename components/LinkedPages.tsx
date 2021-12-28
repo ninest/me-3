@@ -26,11 +26,7 @@ const LinkedPages = ({
         {pages.map((page) => (
           <div key={page.url}>
             <PagePreview
-              url={page.url}
-              icon={page.icon}
-              iconSize="xs"
-              title={page.title}
-              description={page.description}
+              data={{ ...page }}
               ghost={ghost}
               size={size}
             ></PagePreview>

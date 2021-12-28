@@ -20,9 +20,15 @@ export const useTheme = () => {
     document.body.dataset.theme = theme;
   };
 
+  const isLightTheme = currentTheme == "light";
+  const isDarkTheme = currentTheme == "dark";
+
   return {
     currentTheme,
     setTheme,
+
+    isLightTheme,
+    isDarkTheme
   };
 };
 
