@@ -1,7 +1,8 @@
 ---
 title: CredR
 description: My first internship as a software developer
-updatedAt: 2021-12-27
+updatedAt: 2017-12-07
+createdAt: 2017-12-07
 
 icon: credr
 

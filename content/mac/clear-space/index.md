@@ -1,7 +1,7 @@
 ---
 title: Clear Space On Mac
 description: Reclaim space from XCode and other folders on your Mac
-
+icon: desktop
 updatedAt: 2021-06-06
 createdAt: 2021-06-03
 ---

@@ -20,10 +20,10 @@ const PostListing = ({
           { "p-sm -m-sm": ghost, "p-md": !ghost }
         )}
       >
-        <div className="min-w-[6rem] text-sm font-semibold text-gray">
+        <div className="min-w-[8rem] text-sm font-semibold text-gray">
           {formatShortDate(new Date(frontmatter.updatedAt))}
         </div>
-        <h3 className="font-semibold text-gray">{frontmatter.title}</h3>
+        <h3 className="font-semibold text-gray-darker">{frontmatter.title}</h3>
       </SmartLink>
     </>
   );

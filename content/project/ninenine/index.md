@@ -9,7 +9,7 @@ linkedPages:
     url: https://github.com/ninest/holt-soundboard-web
     title: Website GitHub
   - icon: github
-    url: https://github.com/ninest/holt-soundboard-web
+    url: https://github.com/ninest/holt-soundboard-mobile
     title: Mobile App GitHub
   # - icon: playstore
   #   url: https://play.google.com/store/apps/details?id=com.themindstorm.nextbussg

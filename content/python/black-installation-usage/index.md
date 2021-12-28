@@ -1,9 +1,11 @@
 ---
 title: Installing And Using Black
-description: Learn Black, configure VSCode to run Black, set up pre-commit hooks to format code before pushing
+description: Format your Python code and set up pre-commit hooks
 
 updatedAt: 2021-05-25
 createdAt: 2021-05-25
+
+icon: black
 
 linkedPages:
   - icon: web

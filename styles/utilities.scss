@@ -57,8 +57,7 @@
     .alert {
       .mobile-full-bleed {
         /*
-        Temporary fix for pre (code blocks) overflowing in alerts
-        The problem exists because of .mobile-full-bleed inside the alert
+        Fix for pre (code blocks) overflowing in alerts
         */
         width: 100%;
       }

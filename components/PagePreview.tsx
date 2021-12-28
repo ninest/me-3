@@ -2,12 +2,13 @@ import clsx from "clsx";
 import { HTMLAttributes } from "react";
 import { formatShortDate } from "@/lib/date";
 import { MarkdownPageData } from "@/types/content";
-import Icon from "./Icon";
+import Icon, { IconProps } from "./Icon";
 import SmartLink from "./SmartLinks";
 import Spacer from "./Space";
 
 export interface PagePreviewProps extends HTMLAttributes<HTMLDivElement> {
   icon: string;
+  iconSize?: IconProps["size"];
   url: string;
   title: string;
   description?: string;
@@ -18,6 +19,7 @@ export interface PagePreviewProps extends HTMLAttributes<HTMLDivElement> {
 
 const PagePreview = ({
   icon,
+  iconSize = "sm",
   url,
   title,
   description,
@@ -44,10 +46,14 @@ const PagePreview = ({
           props.className
         )}
       >
-        <div className="flex space-x-xl">
-          <div className="flex-initial">
+        <div className="flex items-center space-x-xl">
+          <div className="flex-initial w-7">
             <div>
-              <Icon className="text-gray-light" id={icon} size="sm"></Icon>
+              <Icon
+                className="text-gray-light"
+                id={icon}
+                size={iconSize}
+              ></Icon>
             </div>
           </div>
           <div className="flex-1">

@@ -1,9 +1,11 @@
 ---
 title: Running Sonic Pi From VSCode
-description: Configuring tasks and keybindings in VSCode to play sound from Sonic Pi on a single keystroke.
+description: Tasks and keybindings in VSCode to play sound from Sonic Pi
 
 updatedAt: 2020-05-29
 createdAt: 2020-06-26
+
+icon: sonicpi
 
 linkedPages:
   - icon: web

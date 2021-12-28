@@ -1,9 +1,8 @@
 ---
 title: Natively Embed Google Forms In Your Website
-
 description: Unlimited form submissions for free!
 
-toc: true
+icon: filealt
 
 updatedAt: 2021-05-29
 createdAt: 2020-07-02

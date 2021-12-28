@@ -1,9 +1,12 @@
 ---
 title: Using VSCode Interactive With Pyenv Virtualenv
-description: Appropriately setting up your virtual environment with pyenv-virtualenv to use VSCode Interactive for Python
+description: Setting up VSCode Interactive for Python
+tags: pyenv-virtualenv, vscode, python
 
 updatedAt: 2021-07-01
 createdAt: 2021-07-01
+
+icon: python
 
 linkedPages:
   - icon: web

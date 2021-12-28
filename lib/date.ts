@@ -5,5 +5,5 @@ export function formatDate(date: Date) {
 }
 
 export function formatShortDate(date: Date) {
-  return format(date, "MMM d, yy");
+  return format(date, "MMM d, yyyy");
 }

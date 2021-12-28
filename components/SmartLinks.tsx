@@ -23,13 +23,13 @@ const SmartLink = ({
   });
 
   if (href[0] === "/")
-    return (
+  return (
       <Link href={href}>
         <a {...props} className={className} />
       </Link>
     );
 
-  return <a {...props} className={className} target="_blank" rel="noopener" />;
+  return <a {...props} className={className} href={href} target="_blank" rel="noopener" />;
 };
 
 export default SmartLink;

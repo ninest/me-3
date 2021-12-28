@@ -3,7 +3,7 @@ title: Git Shortlog
 description: View a breakdown of the commits per user
 seoDescription: View a breakdown of the commits per user; summarize the commit count of users and authors
 
-toc: false
+icon: git
 
 updatedAt: 2021-05-30
 createdAt: 2021-05-30

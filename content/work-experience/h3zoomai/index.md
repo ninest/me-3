@@ -1,7 +1,9 @@
 ---
 title: H3Zoom.AI
 description: My second internship as a software developer
-updatedAt: 2021-12-27
+
+updatedAt: 2018-06-01
+createdAt: 2018-06-01
 
 icon: h3
 

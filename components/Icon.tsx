@@ -1,24 +1,34 @@
 import Image from "next/image";
 import clsx from "clsx";
-import { HTMLAttributes, ReactNode } from "react";
+import { HTMLAttributes } from "react";
 import { IconType } from "react-icons";
 import {
   FaAppStoreIos,
   FaBrain,
+  FaComments,
+  FaDesktop,
   FaFirefox,
+  FaGitAlt,
   FaGithub,
+  FaGlobe,
   FaGooglePlay,
   FaGrinBeam,
+  FaImages,
   FaMoon,
   FaPencilAlt,
+  FaPython,
   FaRedditAlien,
   FaRegFileAlt,
   FaSearch,
+  FaShieldAlt,
+  FaSitemap,
   FaSortNumericUp,
   FaSun,
+  FaYoutube,
 } from "react-icons/fa";
+import { BsFillTerminalFill } from "react-icons/bs";
 
-interface IconProps extends HTMLAttributes<HTMLDivElement> {
+export interface IconProps extends HTMLAttributes<HTMLDivElement> {
   size?: "xs" | "sm" | "base" | "md" | "lg";
   id?: string;
 }
@@ -30,8 +40,8 @@ const Icon = ({ children, size = "base", id, ...props }: IconProps) => {
       "text-6xl": size == "lg",
       "text-5xl": size == "md",
       "text-4xl": size == "base",
-      "text-2xl": size == "sm",
-      "text-xl": size == "xs",
+      "text-3xl": size == "sm",
+      "text-2xl": size == "xs",
     },
     props.className
   );
@@ -50,13 +60,13 @@ const Icon = ({ children, size = "base", id, ...props }: IconProps) => {
     let width = 30;
     switch (size) {
       case "sm":
-        width = 30;
-        break;
-      case "base":
         width = 35;
         break;
-      case "md":
+      case "base":
         width = 40;
+        break;
+      case "md":
+        width = 50;
         break;
       case "lg":
         width = 60;
@@ -82,9 +92,19 @@ const iconMap: Record<string, IconType> = {
   brain: FaBrain,
   playstore: FaGooglePlay,
   appstore: FaAppStoreIos,
-  web: FaFirefox,
+  web: FaGlobe,
+  firefox: FaFirefox,
   filealt: FaRegFileAlt,
   reddit: FaRedditAlien,
+  youtube: FaYoutube,
+  sitemap: FaSitemap,
+  desktop: FaDesktop,
+  comments: FaComments,
+  terminal: BsFillTerminalFill,
+  images: FaImages,
+  git: FaGitAlt,
+  python: FaPython,
+  shield: FaShieldAlt,
 };
 
 const svgIconMap: Record<string, string> = {
@@ -97,4 +117,6 @@ const svgIconMap: Record<string, string> = {
   credr: "/icons/ccc.svg",
   h3: "/icons/h3.svg",
   saf: "/icons/saf.svg",
+  sonicpi: "/icons/sonicpi.svg",
+  black: "/icons/black.svg",
 };

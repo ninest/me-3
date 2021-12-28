@@ -2,7 +2,8 @@
 title: How To Use The Say Command
 description: Using the built-in MacOS say command, and customizing the voice.
 
-toc: true
+icon: comments
+
 createdAt: 2021-05-31
 updatedAt: 2021-05-31
 

@@ -2,9 +2,10 @@
 title: Improving Your Online Security
 description: Putting on a digital face mask
 
-toc: true
 updatedAt: 2021-05-27
 createdAt: 2021-05-27
+
+icon: shield
 ---
 
 Do you use the same password across different sites? Have you ever received an email from yourself (somehow), where a hacker tries tries to extort money? Here are some ways to improve your online security.
@@ -13,11 +14,11 @@ Do you use the same password across different sites? Have you ever received an e
 
 Use a unique password for each site you log into. This greatly decreases your chances of being hacked.
 
-***But my one password is super strong***
+**_But my one password is super strong_**
 
 Yes, it may be, but your password strength was never the issue. Obviously you should use a strong password, but if you use a single password, when one website gets hacked, "all" of your passwords are leaked. It's like putting all your eggs in one basket.
 
-***Okay, but how do I remember all these passwords?***
+**_Okay, but how do I remember all these passwords?_**
 
 You don't. Use a password manager.
 
@@ -25,7 +26,7 @@ If you use only iOS, Mac, and Safari, use Apple's password manager, iCloud Keych
 
 If you use only Chrome, use [Google's password manager](https://passwords.google.com/).
 
-If you use Firefox, use [Firefox Lockwise](https://www.mozilla.org/en-US/firefox/lockwise/). 
+If you use Firefox, use [Firefox Lockwise](https://www.mozilla.org/en-US/firefox/lockwise/).
 
 My personal suggestion is [**Bitwarden**](https://bitwarden.com/). It is free and open-source, has a mobile app, browser extension, and web interface, so I can access my passwords everywhere. I only need to keep one master password, which I have written down and kept in ██ ███ ██████.
 
@@ -41,6 +42,6 @@ Obviously you cannot do all of this overnight. You may not remember that shady g
 
 To check for data breaches where your personal data has been leaked, use [Firefox Monitor](https://monitor.firefox.com/). I also highly recommend signing up for their email alerts so you can be notified as and when the breach is detected.
 
-***My email has been breached, what do I do?***
+**_My email has been breached, what do I do?_**
 
 Check the compromised data. It will likely include email address and password. If so, change your password.

@@ -44,7 +44,7 @@ const IndexPage = ({ projects, workExperience }: IndexPageProps) => {
 
         <article className="prose">
           <p>
-            Hi! I'm a computer science student at <b>Northeastern University</b>
+            Hi! I'm a computer science student at <b>Northeastern University</b>{" "}
             with significant experience in app development. Please hire me.
           </p>
         </article>

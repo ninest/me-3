@@ -18,22 +18,17 @@ const LinkedPages = ({
   return (
     <>
       <div
-        className={clsx(
-          {
-            // "space-y-sm": size == "sm",
-            // "space-y-base": size == "base",
-            // "space-y-lg": size == "lg",
-          },
-          {
-            "grid gap-md grid-cols-2 md:grid-cols-3": grid,
-          }
-        )}
+        className={clsx({
+          "grid gap-md grid-cols-2 md:grid-cols-3": grid,
+          "space-y-sm": !grid,
+        })}
       >
         {pages.map((page) => (
           <div key={page.url}>
             <PagePreview
               url={page.url}
               icon={page.icon}
+              iconSize="xs"
               title={page.title}
               description={page.description}
               ghost={ghost}

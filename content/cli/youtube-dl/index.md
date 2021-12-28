@@ -4,7 +4,7 @@ description: Learn how to use youtube-dl on the CLI with simple recipes to help 
 
 updatedAt: 2021-06-01
 createdAt: 2021-06-01
-
+icon: youtube
 linkedPages:
   - icon: web
     url: "https://github.com/ytdl-org/youtube-dl/blob/master/README.md#installation"
@@ -128,7 +128,7 @@ The video `Rick Astley - Never Gonna Give You Up (Video)-956123176.mkv` will be 
 
 ### Metadata
 
-<Alert warning title="ERROR: AtomicParsley was not found. Please install.">
+<Alert variant="warning" title="ERROR: AtomicParsley was not found. Please install.">
 
 Some commands from this section require AtomicParsley. To install it, go to [wez/AtomicParsley](https://github.com/wez/AtomicParsley) and follow the instructions, or use
 

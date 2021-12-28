@@ -1,7 +1,7 @@
 ---
 title: Remove Mac Screenshot Shadow
 description: Enable and disable the shadow in cropped screenshots
-
+icon: images
 updatedAt: 2021-06-07
 createdAt: 2021-06-07
 ---

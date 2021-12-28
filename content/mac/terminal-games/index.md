@@ -1,7 +1,7 @@
 ---
 title: Plays Games On Terminal
 description: Play tetris, pong, snake, solitaire, and more games on the Mac Terminal with emacs
-
+icon: terminal
 updatedAt: 2021-06-06
 createdAt: 2021-06-06
 ---

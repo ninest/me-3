@@ -3,7 +3,7 @@ title: How To Undo Commits
 description: Undo your last N commits with git reset.
 seoDescription: Undo your last N commits with git reset with the --soft option. Revert your last few commits if you make a mistake.
 
-toc: false
+icon: git
 
 updatedAt: 2021-05-29
 createdAt: 2021-05-29

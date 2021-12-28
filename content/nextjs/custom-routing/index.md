@@ -1,11 +1,13 @@
 ---
 title: Dividing Your App Into Modules
-description: Divide your app into modules and organize all related code together. Customize your file structure in your NextJS applications.
+description: Non-file based routing in NextJS
 
 shortDescription: Customize how your organize your code
 
 updatedAt: 2021-05-31
 createdAt: 2021-05-26
+
+icon: sitemap
 
 linkedPages:
   - icon: github
