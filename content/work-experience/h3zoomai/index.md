@@ -12,8 +12,8 @@ linkedPages:
     url: /resume
     title: My Resume
   - icon: web
-    url: https://credr.com
-    title: CredR Website
+    url: https://h3zoom.ai
+    title: H3Zoom.AI Website
 ---
 
 My second internship was at an award-winning startup in Singapore, as a software developer.

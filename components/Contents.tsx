@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import clsx from "clsx";
+import { useRouter } from "next/router";
 
 interface Heading {
   slug: string;
@@ -9,9 +10,10 @@ interface Heading {
 
 const Contents = () => {
   const [headings, setHeadings] = useState<Heading[]>([]);
+  const router = useRouter();
 
   useEffect(() => {
-    // setHeadings([]);
+    setHeadings([]);
     const article = document.getElementsByTagName("article")[0];
     if (article)
       for (let e of article.children as any) {
@@ -28,7 +30,8 @@ const Contents = () => {
           setHeadings((previousHeadings) => [...previousHeadings, heading]);
         }
       }
-  }, []);
+    /* Update Contents on page change */
+  }, [router.asPath]);
 
   return (
     <>
