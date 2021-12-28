@@ -1,6 +1,6 @@
 ---
 title: H3Zoom.AI
-description: My second internship as a software developer
+description: Software Developer Intern
 
 updatedAt: 2018-06-01
 createdAt: 2018-06-01

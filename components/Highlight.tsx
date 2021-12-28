@@ -16,7 +16,7 @@ import Title from "./typography/Title";
 interface HighlightProps extends HTMLAttributes<HTMLDivElement> {
   theme?: "gray" | "primary" | "error" | "warning";
   // frontmatter: Omit<Frontmatter, "slug" | "showContents" | "updatedAt">;
-  frontmatter: Pick<Frontmatter, "title"|"description"|"icon">;
+  frontmatter: Partial<Frontmatter>;
   category?: IncompleteCategory;
 }
 
@@ -41,7 +41,7 @@ const Highlight = ({
       )}
     >
       <div className="absolute font-black" style={{ fontSize: `10rem` }}>
-        <span className="opacity-5">{frontmatter.title.slice(0, 2)}</span>
+        <span className="opacity-5">{frontmatter?.title?.slice(0, 2)}</span>
       </div>
 
       <Icon id={frontmatter.icon} size="lg"></Icon>
@@ -59,7 +59,7 @@ const Highlight = ({
             <SmartLink href={`/${category.code}`}>{category.name}</SmartLink>
             <span>{"·"}</span>
             <span className="text-gray">
-              {formatDate(new Date(frontmatter.updatedAt))}
+              {formatDate(new Date(frontmatter?.updatedAt!))}
             </span>
           </>
         )}
@@ -72,8 +72,8 @@ const Highlight = ({
           <LinkedPages
             ghost
             grid
-            size="sm"
-            pages={frontmatter.linkedPages}
+            size="sm" 
+            pages={frontmatter?.linkedPages!}
           ></LinkedPages>
         </>
       )}

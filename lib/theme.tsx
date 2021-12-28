@@ -3,6 +3,11 @@ import { createContext, ReactNode, useEffect, useState } from "react";
 export const themes = ["light", "dark"] as const;
 export type Theme = typeof themes[number];
 
+const statusBarColor: Record<Theme, string> = {
+  light: "#ff0000",
+  dark: "#0000ff",
+};
+
 const getTheme = (): Theme => {
   return (window.localStorage.getItem("theme") as Theme) || "light";
 };
@@ -20,6 +25,12 @@ export const useTheme = () => {
     document.body.dataset.theme = theme;
   };
 
+  const setStatusBarColor = (color: string) => {
+    document
+      ?.querySelector("meta[name=theme-color]")
+      ?.setAttribute("content", color);
+  };
+
   const isLightTheme = currentTheme == "light";
   const isDarkTheme = currentTheme == "dark";
 
@@ -28,7 +39,7 @@ export const useTheme = () => {
     setTheme,
 
     isLightTheme,
-    isDarkTheme
+    isDarkTheme,
   };
 };
 

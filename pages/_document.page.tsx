@@ -25,6 +25,8 @@ class MyDocument extends Document {
             crossOrigin="anonymous"
           />
           <link rel="stylesheet" href="/font.css" />
+          <meta name="theme-color" content="#111111" />
+
         </Head>
         <body className="bg-light">
           <Main />

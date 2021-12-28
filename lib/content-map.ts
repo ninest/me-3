@@ -1,8 +1,4 @@
-import {
-  Category,
-  IncompleteCategory,
-  MarkdownPageData,
-} from "../types/content";
+import { IncompleteCategory, MarkdownPageData } from "@/types/content";
 
 export const categories: IncompleteCategory[] = [
   { code: "python", name: "Python" },
@@ -70,6 +66,6 @@ export const posts: MarkdownPageData[] = [
   // { categoryCodes: ["cs", "blog"], slug: "selection-sort" },
 ];
 
-export const otherPages = ["about"];
+export const otherPages = ["about", "resume"];
 
 export const featuredPosts: MarkdownPageData[] = [];

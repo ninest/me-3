@@ -1,6 +1,6 @@
 ---
 title: Singapore Armed Forces
-description: National Service in Singapore
+description: National Service, Software Developer
 
 updatedAt: 2019-10-02
 createdAt: 2019-10-02
