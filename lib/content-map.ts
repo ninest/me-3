@@ -32,6 +32,7 @@ export const posts: MarkdownPageData[] = [
   { categoryCodes: ["project"], slug: "shots" },
   { categoryCodes: ["mini-project"], slug: "typer" },
   { categoryCodes: ["mini-project"], slug: "uniquecode" },
+  { categoryCodes: ["mini-project"], slug: "hexy-time" },
 
   /* Interests */
   { categoryCodes: ["interest"], slug: "origami" },

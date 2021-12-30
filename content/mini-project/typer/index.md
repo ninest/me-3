@@ -1,7 +1,9 @@
 ---
 title: Typer
 description: The 10-second typing game
-updatedAt: 2021-12-27
+
+createdAt: 2020-05-18
+updatedAt: 2020-05-18
 
 icon: typer
 linkedPages:
