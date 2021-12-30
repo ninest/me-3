@@ -12,3 +12,5 @@ linkedPages:
     url: /resume
     title: My Resume
 ---
+
+Article coming soon!

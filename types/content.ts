@@ -24,7 +24,7 @@ export interface MarkdownPageData {
   categoryCodes: CategoryCode[];
   slug: string;
 
-  frontmatter?: Frontmatter;
+  frontmatter: Frontmatter;
 
   // "Code" from MDX-bundler for rendering the content
   code?: any;

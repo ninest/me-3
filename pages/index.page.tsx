@@ -8,6 +8,8 @@ import { getFullCategory } from "@/lib/content";
 import { Category, MarkdownPageData } from "@/types/content";
 import PagePreview from "@/components/PagePreview";
 import { pageUrl } from "@/lib/content/page-url";
+import Icon from "@/components/Icon";
+import SmartLink from "@/components/SmartLinks";
 
 export const getStaticProps = async ({ params }: GetServerSidePropsContext) => {
   const projects = await getFullCategory("project");
@@ -59,6 +61,23 @@ const IndexPage = ({
             development. Please hire me!
           </p>
         </article>
+
+        <Spacer></Spacer>
+        {/* Buttons */}
+        <section className="flex space-x-base">
+          <SmartLink
+            className="p-xs rounded bg-gray-100 hover:bg-gray-lightest"
+            href="https://github.com/ninest"
+          >
+            <Icon id="github"></Icon>
+          </SmartLink>
+          <SmartLink
+            className="p-xs rounded bg-gray-100 hover:bg-gray-lightest"
+            href="https://www.linkedin.com/in/parth-kabra/"
+          >
+            <Icon id="linkedin"></Icon>
+          </SmartLink>
+        </section>
 
         <Spacer size="3xl"></Spacer>
 

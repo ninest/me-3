@@ -12,13 +12,20 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     (post) =>
       !(
         post.categoryCodes.includes("project") ||
+        post.categoryCodes.includes("mini-project") ||
         post.categoryCodes.includes("work-experience") ||
         post.categoryCodes.includes("interest")
       )
   );
 
   const pages = await getPostsFromList(postsList);
-  return { props: { pages } };
+  const sortedByDate = pages.sort((a, b) => {
+    return (
+      new Date(b.frontmatter.updatedAt).valueOf() -
+      new Date(a.frontmatter.updatedAt).valueOf()
+    );
+  });
+  return { props: { pages: sortedByDate } };
 };
 
 const BlogListPage = ({ pages }: { pages: MarkdownPageData[] }) => {

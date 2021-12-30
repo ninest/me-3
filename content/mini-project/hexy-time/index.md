@@ -12,3 +12,5 @@ linkedPages:
     url:  https://hexy-time.now.sh
     title: Website
 ---
+
+Article coming soon!
