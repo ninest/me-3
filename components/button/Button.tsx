@@ -1,3 +1,4 @@
+import { useTheme } from "@/lib/theme";
 import clsx from "clsx";
 
 import { HTMLAttributes } from "react";
@@ -19,7 +20,7 @@ const Button = ({
   children,
   ...props
 }: ButtonProps) => {
-  // const { isLightTheme, isDarkTheme } = useColorTheme();
+  const { isLightTheme, isDarkTheme } = useTheme();
 
   const Element = (
     <button
@@ -32,8 +33,10 @@ const Button = ({
         },
         "focus:ring ring-offset-2",
         {
-          "bg-gray-lightest text-gray-darkest ring-gray-darker":
-            variant === "gray",
+          "ring-gray-darker": variant == "gray",
+          "bg-gray-lightest text-gray-darkest":
+            variant === "gray" && isLightTheme,
+          "bg-gray-lightest text-gray-dark": variant === "gray" && isDarkTheme,
 
           "bg-primary text-primary-lightest ring-primary-light":
             variant === "primary",

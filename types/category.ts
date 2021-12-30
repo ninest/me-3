@@ -10,6 +10,8 @@ export const categoryCodes = [
   "cli",
   "cs",
   "project",
+  "mini-project",
   "work-experience",
+  "interest",
 ] as const;
 export type CategoryCode = typeof categoryCodes[number];

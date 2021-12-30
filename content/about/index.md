@@ -7,4 +7,4 @@ description: More about me
 
 I'm a computer science student at **Northeastern University**. I'm currently searching for internships for Summer 2022.
 
-I hope to share guides on simple but interesting topics.
+I hope to share guides on simple but interesting topics on [my blog](/blog).

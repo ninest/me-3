@@ -122,4 +122,5 @@ const svgIconMap: Record<string, string> = {
   saf: "/icons/saf.svg",
   sonicpi: "/icons/sonicpi.svg",
   black: "/icons/black.svg",
+  origami: "/icons/origami.svg",
 };

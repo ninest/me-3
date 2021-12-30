@@ -4,10 +4,7 @@ import Title from "@/components/typography/Title";
 import { getAllPages, getPostsFromList } from "@/lib/content";
 import { posts } from "@/lib/content-map";
 import { MarkdownPageData } from "@/types/content";
-import {
-
-  GetStaticProps,
-} from "next";
+import { GetStaticProps } from "next";
 import { NextSeo } from "next-seo";
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
@@ -15,7 +12,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     (post) =>
       !(
         post.categoryCodes.includes("project") ||
-        post.categoryCodes.includes("work-experience")
+        post.categoryCodes.includes("work-experience") ||
+        post.categoryCodes.includes("interest")
       )
   );
 

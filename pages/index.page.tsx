@@ -5,27 +5,34 @@ import Spacer from "@/components/Space";
 import Space from "@/components/Space";
 import Button from "@/components/button/Button";
 import { getFullCategory } from "@/lib/content";
-import { Category } from "@/types/content";
+import { Category, MarkdownPageData } from "@/types/content";
 import PagePreview from "@/components/PagePreview";
 import { pageUrl } from "@/lib/content/page-url";
 
-export const getStaticProps = async ({
-  params,
-}: GetServerSidePropsContext) => {
+export const getStaticProps = async ({ params }: GetServerSidePropsContext) => {
   const projects = await getFullCategory("project");
+  const miniProjects = await getFullCategory("mini-project");
   const workExperience = await getFullCategory("work-experience");
+  const interests = await getFullCategory("interest");
 
   return {
-    props: { projects, workExperience },
+    props: { projects, workExperience, interests, miniProjects },
   };
 };
 
 interface IndexPageProps {
   projects: Category;
+  miniProjects: Category;
   workExperience: Category;
+  interests: Category;
 }
 
-const IndexPage = ({ projects, workExperience }: IndexPageProps) => {
+const IndexPage = ({
+  projects,
+  miniProjects,
+  workExperience,
+  interests,
+}: IndexPageProps) => {
   return (
     <>
       <div className="wrapper">
@@ -47,64 +54,56 @@ const IndexPage = ({ projects, workExperience }: IndexPageProps) => {
 
         <article className="prose">
           <p>
-            Hi! I{"'"}m a computer science student at <b>Northeastern University</b>{" "}
-            with significant experience in app development. Please hire me!
+            Hi! I{"'"}m a computer science student at{" "}
+            <b>Northeastern University</b> with significant experience in app
+            development. Please hire me!
           </p>
         </article>
 
         <Spacer size="3xl"></Spacer>
 
-        <Title level={2}>Work Experience</Title>
-        <Spacer size="lg"></Spacer>
-
-        <section className="grid gap-xl grid-cols-1 md:grid-cols-2">
-          {workExperience.pages.map((page) => (
-            <PagePreview
-              key={pageUrl(page)}
-              data={{
-                url: pageUrl(page),
-                icon: page.frontmatter?.icon!,
-                title: page.frontmatter?.title!,
-                description: page.frontmatter?.description,
-              }}
-              size="lg"
-              ghost
-            ></PagePreview>
-          ))}
-        </section>
-
+        <Section category={workExperience}></Section>
         <Spacer size="3xl"></Spacer>
-
-        <Title level={2}>Projects</Title>
-        <Spacer size="lg"></Spacer>
-
-        <section className="grid gap-xl grid-cols-1 md:grid-cols-2">
-          {projects.pages.map((page) => (
-            <PagePreview
-              key={pageUrl(page)}
-              data={{
-                url: pageUrl(page),
-                icon: page.frontmatter?.icon!,
-                title: page.frontmatter?.title!,
-                description: page.frontmatter?.description,
-              }}
-              size="lg"
-              ghost
-            ></PagePreview>
-          ))}
-        </section>
-
+        <Section category={projects}></Section>
         <Spacer size="3xl"></Spacer>
+        <Section category={miniProjects}></Section>
 
-        <Title level={2}>Interests</Title>
-        <Spacer size="lg"></Spacer>
+        <Spacer size="2xl"></Spacer>
+        <hr />
+        <Spacer size="xl"></Spacer>
 
-        <article className="prose">
-          <ul>
-            <li>Origami</li>
-          </ul>
-        </article>
+        <Section category={interests}></Section>
+        <Spacer size="3xl"></Spacer>
       </div>
+    </>
+  );
+};
+
+interface SectionProps {
+  title?: string;
+  category: Category;
+}
+const Section = ({ title, category }: SectionProps) => {
+  return (
+    <>
+      <Title level={2}>{title ?? category.name}</Title>
+      <Spacer size="lg"></Spacer>
+
+      <section className="grid gap-xl grid-cols-1 md:grid-cols-2">
+        {category.pages.map((page) => (
+          <PagePreview
+            key={pageUrl(page)}
+            data={{
+              url: pageUrl(page),
+              icon: page.frontmatter?.icon!,
+              title: page.frontmatter?.title!,
+              description: page.frontmatter?.description,
+            }}
+            size="lg"
+            ghost
+          ></PagePreview>
+        ))}
+      </section>
     </>
   );
 };

@@ -16,8 +16,8 @@ linkedPages:
 Typer is a simple typing game to test out your typing speed and compete with friends.
 
 
-import start from './project/typer/images/start.png'
-import game from './project/typer/images/game.png'
+import start from './mini-project/typer/images/start.png'
+import game from './mini-project/typer/images/game.png'
 
 <div className="flex space-x-base">
   <Image src={start} height={591} width={450} />

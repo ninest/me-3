@@ -16,8 +16,8 @@ linkedPages:
 Unique Code lets you copy and paste 𝗿𝗶𝗰𝗵 𝒕𝒆𝒙𝒕 into fields that only support plain text.
 
 
-import one from './project/uniquecode/images/1.png'
-import two from './project/uniquecode/images/2.png'
+import one from './mini-project/uniquecode/images/1.png'
+import two from './mini-project/uniquecode/images/2.png'
 
 <div className="flex space-x-base">
   <Image src={one} height={826} width={450} />

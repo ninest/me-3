@@ -11,8 +11,10 @@ export const categories: IncompleteCategory[] = [
   { code: "mac", name: "Mac" },
   { code: "cli", name: "CLI" },
   { code: "cs", name: "Computer Science" },
-  { code: "project", name: "Project" },
+  { code: "project", name: "Projects" },
+  { code: "mini-project", name: "Mini-projects" },
   { code: "work-experience", name: "Work Experience" },
+  { code: "interest", name: "Interests" },
 ];
 
 export const posts: MarkdownPageData[] = [
@@ -28,8 +30,11 @@ export const posts: MarkdownPageData[] = [
   { categoryCodes: ["project"], slug: "ninenine" },
   { categoryCodes: ["project"], slug: "national-service-resources" },
   { categoryCodes: ["project"], slug: "shots" },
-  { categoryCodes: ["project"], slug: "typer" },
-  { categoryCodes: ["project"], slug: "uniquecode" },
+  { categoryCodes: ["mini-project"], slug: "typer" },
+  { categoryCodes: ["mini-project"], slug: "uniquecode" },
+
+  /* Interests */
+  { categoryCodes: ["interest"], slug: "origami" },
 
   /* Work experience */
   { categoryCodes: ["work-experience"], slug: "singapore-armed-forces" },
