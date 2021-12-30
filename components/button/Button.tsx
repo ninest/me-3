@@ -36,7 +36,7 @@ const Button = ({
           "ring-gray-darker": variant == "gray",
           "bg-gray-lightest text-gray-darkest":
             variant === "gray" && isLightTheme,
-          "bg-gray-lightest text-gray-dark": variant === "gray" && isDarkTheme,
+          "bg-gray-lightest text-gray-dark ring-gray-lightest": variant === "gray" && isDarkTheme,
 
           "bg-primary text-primary-lightest ring-primary-light":
             variant === "primary",

@@ -4,6 +4,16 @@ module.exports = {
   async redirects() {
     return [
       {
+        source: "/project/typer",
+        destination: "/mini-project/typer",
+        permanent: true,
+      },
+      {
+        source: "/project/uniquecode",
+        destination: "/mini-project/uniquecode",
+        permanent: true,
+      },
+      {
         source: "/current",
         destination: "/about",
         permanent: true,
