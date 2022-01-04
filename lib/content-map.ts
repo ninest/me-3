@@ -69,6 +69,7 @@ export const posts: IncompleteMarkdownPageData[] = [
   { categoryCodes: ["html"], slug: "google-forms-embed" },
 
   /* Git */
+  { categoryCodes: ["git"], slug: "log" },
   { categoryCodes: ["git"], slug: "shortlog" },
   { categoryCodes: ["git"], slug: "undo-commits" },
 
@@ -76,6 +77,6 @@ export const posts: IncompleteMarkdownPageData[] = [
   // { categoryCodes: ["cs", "blog"], slug: "selection-sort" },
 ];
 
-export const otherPages = ["about", "resume"];
+export const otherPages = ["about", "resume","test"];
 
 export const featuredPosts: MarkdownPageData[] = [];

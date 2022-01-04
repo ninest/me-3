@@ -20,9 +20,9 @@ const CodeBlock = ({ language, code = "", ...props }: CodeBlockProps) => {
       language={isPcode ? "python" : (language as Language)}
       theme={theme!}
       /* 
-  Pseudoscope is super similar in syntax to Python, so latch onto 
-  its tokenization  
-  */
+      Pseudoscope is super similar in syntax to Python, so latch onto 
+      its tokenization  
+      */
     >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <pre
@@ -39,13 +39,17 @@ const CodeBlock = ({ language, code = "", ...props }: CodeBlockProps) => {
         >
           {tokens.map((line, i) => {
             return (
-              <div key={i} {...getLineProps({ line, key: i })}>
+              <div
+                key={i}
+                {...getLineProps({ line, key: i })}
+                // className={clsx("opacity-50")}
+              >
                 {line.map((token, key) => {
                   /* Comments in pcode should be lighter */
                   const isComment = token.types.includes("comment");
                   return (
                     <span
-                    key={key}
+                      key={key}
                       {...getTokenProps({ token, key })}
                       className={clsx({
                         "text-gray-500 italic font-medium":

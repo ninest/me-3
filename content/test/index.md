@@ -5,7 +5,7 @@ lastUpdated: 2021-01-01
 
 ## This page is for testing
 
-```cpp
+```cpp hello
 test code test code test code test code test code test code test code test code 
   test code test code test code test code 
     test code test code test code  {

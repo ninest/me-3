@@ -82,11 +82,9 @@ View more options on the [documentation for git shortlog](https://git-scm.com/do
 
 Use the command
 
-<ExpandableCode>
 ```bash
 git shortlog -s -n --all --no-merges
 ```
-</ExpandableCode>
 
 `--no-merges` ensures that merge commits are not counted.
 
