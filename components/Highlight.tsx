@@ -15,7 +15,6 @@ import Title from "./typography/Title";
 
 interface HighlightProps extends HTMLAttributes<HTMLDivElement> {
   theme?: "gray" | "primary" | "error" | "warning";
-  // frontmatter: Omit<Frontmatter, "slug" | "showContents" | "updatedAt">;
   frontmatter: Partial<Frontmatter>;
   category?: IncompleteCategory;
 }
@@ -66,13 +65,13 @@ const Highlight = ({
       </div>
 
       {/* For projects, show links at the top too */}
-      {category?.code === "project" && (
+      {(category?.code === "project" || category?.code === "mini-project") && (
         <>
           <Spacer size="xl"></Spacer>
           <LinkedPages
             ghost
             grid
-            size="sm" 
+            size="sm"
             pages={frontmatter?.linkedPages!}
           ></LinkedPages>
         </>

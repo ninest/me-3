@@ -32,7 +32,7 @@ const MarkdownPage = ({
         frontmatter={frontmatter}
         category={category}
       ></Highlight>
-
+      
       <Spacer size="xl"></Spacer>
 
       <article className="wrapper prose relative">

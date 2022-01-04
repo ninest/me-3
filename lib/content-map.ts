@@ -31,17 +31,23 @@ export const posts: IncompleteMarkdownPageData[] = [
 
   // Projects
   { categoryCodes: ["project"], slug: "nextbussg" },
+  { categoryCodes: ["project"], slug: "husker" },
   { categoryCodes: ["project"], slug: "ninenine" },
   { categoryCodes: ["project"], slug: "national-service-resources" },
   { categoryCodes: ["project"], slug: "shots" },
   { categoryCodes: ["mini-project"], slug: "typer" },
   { categoryCodes: ["mini-project"], slug: "uniquecode" },
   { categoryCodes: ["mini-project"], slug: "hexy-time" },
+  { categoryCodes: ["mini-project"], slug: "direct-contact" },
+  { categoryCodes: ["mini-project"], slug: "nric-utils" },
+  { categoryCodes: ["mini-project"], slug: "ippt-utils" },
+  { categoryCodes: ["mini-project"], slug: "commonapp-celebrate" },
 
   /* Interests */
   { categoryCodes: ["interest"], slug: "origami" },
 
   /* Work experience */
+  { categoryCodes: ["work-experience"], slug: "ourfinals" },
   { categoryCodes: ["work-experience"], slug: "singapore-armed-forces" },
   { categoryCodes: ["work-experience"], slug: "h3zoomai" },
   { categoryCodes: ["work-experience"], slug: "credr" },

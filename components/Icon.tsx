@@ -124,4 +124,10 @@ const svgIconMap: Record<string, string> = {
   black: "/icons/black.svg",
   origami: "/icons/origami.svg",
   hexytime: "/icons/hexytime.svg",
+  ourfinals: "/icons/ourfinals.svg",
+  husker: "/icons/husker.svg",
+  directcontact: "/icons/directcontact.svg",
+  ippt: "/icons/ippt.svg",
+  nrics: "/icons/nrics.svg",
+  commonapp: "/icons/commonapp.svg",
 };

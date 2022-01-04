@@ -15,7 +15,7 @@ linkedPages:
 
 import desktop from './project/national-service-resources/images/desktop.png'
 
-  <Image src={desktop} height={1608} width={2654} />
+<Image src={desktop} height={1608} width={2654} />
 
 Enlisting into National Service is a big and emotional event in every Singaporean family’s life. To make it less daunting, I wanted to do my part by helping those out there.
 
