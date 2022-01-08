@@ -15,4 +15,6 @@ linkedPages:
     title: OurFinals Website
 ---
 
-OurFinals is a start up I am currently working for. My responsibilities include the mobile app and website.
+OurFinals is an on demand peer tutoring platform for students by students.
+
+It is a Singapore based startup. I am responsible for building the mobile app and website.
