@@ -12,12 +12,19 @@ showContents: true
 
 ## Skills
 
-- Python, Pandas, Matplotlib, JavaScript/HTML/CSS, React, Vue, Firebase, Flutter, Django, Flask, UI/UX
+- Python, Pandas, Matplotlib, JavaScript/HTML/CSS, React, Vue, PWA, Firebase, Flutter, Django, Flask, UI/UX
 - Final Cut Pro, Figma, Sketch
 - Practitioner for design thinking, minimalistic UI/UX, scalable and extensible software architecture
 - Interested in artificial intelligence, machine learning, Tensor Flow
 
 ## Work Experience
+
+### OurFinals
+
+**Software Developer, Dec 2021–current**
+
+- Building the mobile app and website for the startup which is a marketplace for students to get help on their university assignments. Working directly with the CTO
+- Designing a scalable architecture to eventually roll out to multiple universities
 
 ### Singapore Armed Forces
 
